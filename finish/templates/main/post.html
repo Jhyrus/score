@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} Post {% endblock %}
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="/media/css/post.css">
+{% endblock %}
+{% block script %}
+	<script src="/media/js/post.js"></script>
+{% endblock %}
+{% block content %}
+	<div id="new">
+		<article class="bd-{{ color }}">
+			<span class="category bg-{{ color }}">{{ post.categoria }}</span>
+			<span class="title">{{ post.titulo }}</span>
+			<figure>
+				<img src="/media/{{ post.imagen }}" alt=""/>
+				<figcaption>
+					<span class="desc">{{ post.titulo }}</span>
+					<span class="date">{{ post.fecha }}</span>
+					<span class="autor">{{ post.autor }}</span>
+				</figcaption>
+			</figure>
+			<p> {{ post.contenido|safe }}</p>
+
+		</article>
+		<aside>
+			<div id="notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, modi, fugit, eveniet magnam hic repudiandae dolor ullam natus magni iure provident ius	to nobis illo recusandae tempore amet repellendus molestiae expedita.
+			</div>
+			<div id="tags">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sit pariatur ipsa enim facilis sequi praesentium et cupiditate cum amet dolor modi placeat voluptatum consequuntur deserunt hic aspernatur neque debitis.
+			</div>
+		</aside>
+	</div>
+	<div id="ads">
+		<article id="central" class="bd-darken"></article>
+		<article id="rect" class="bd-darken"></article>
+		<article id="rect" class="bd-darken"></article>
+		<article id="rect" class="bd-darken"></article>
+	</div>
+		
+{% endblock %}
+{% block multimedia %}{% endblock %}	
+
+

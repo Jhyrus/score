@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% block title %} Contactos - Score {% endblock %}
+
+{% block style %}{% endblock %}
+
+	{% block content %}
+		<div id="central">		
+			{% if posts %}
+			<div id="priority-news">
+				<div id="nav">
+					<a href="#" id="lec" class="current">Lo M&aacute;s Reciente</a>
+					<!--<a href="#" id="rec">Mas Leido</a>-->
+				</div>
+				{% for p in posts %}
+					{% ifequal forloop.counter 2 %}
+					<a href="/post/{{ p.id }}/darken">
+						<article>
+							<span class="category">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<img src="/media/{{ p.imagen }}" />
+							<p>{{ p.contenido|safe|truncatechars:100 }}</p>
+						</article>
+					</a>
+					{% endifequal %}
+					{% ifequal forloop.counter 3 %}
+					<a href="/post/{{ p.id }}/darken">
+						<article>
+							<span class="category">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<img src="/media/{{ p.imagen }}" />
+							<p>{{ p.contenido|safe|truncatechars:100 }}</p>
+						</article>
+					</a>
+					{% endifequal %}
+					{% ifequal forloop.counter 4 %}
+					<a href="/post/{{ p.id }}/darken">
+						<article>
+							<span class="category">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<img src="/media/{{ p.imagen }}" />
+							<p>{{ p.contenido|safe|truncatechars:100 }}</p>
+						</article>
+					</a>
+					{% endifequal %}					
+				{% endfor %}
+			</div>
+			
+			<!-- ********* NOTICIA CENTRAL, CON IMAGEN Y DESCRICION ********* -->
+			<div id="main-new">
+				{% for p in posts %}
+					{% ifequal forloop.counter 1 %}
+					<a href="/post/{{ p.id }}/darken">
+						<figure>
+							<img src="/media/{{ p.imagen }}" />
+							<figcaption>
+								<span class="category">{{ p.categoria }}</span>
+								<span class="title">{{ p.titulo }}</span>
+								<p>{{ p.contenido|safe|truncatechars:12 }}</p>
+							</figcaption>
+						</figure>
+					</a>
+					{% endifequal %}					
+				{% endfor %}
+			</div>
+			{% else %}
+				<h4>No existen publicaciones</h4>
+			{% endif %}
+			<!-- ********* LO MAS LEIDO Y LO MAS RECIENTE ********* -->
+			
+			<!-- ********* EQUIPOS ********* -->
+			<div id="teams">
+				<span>Equipos</span>
+				<ul id="nav-teams">
+					<a href=""><li><img src="/media/images/escudos/aurora.png" /><span>Bolivar</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/blooming.png" /><span>Strongest</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/bolivar.png" /><span>Aurora</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/wilstermann.png" /><span>Wilsterman</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/guabira.png" /><span>Oriente petrolero</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/nacionalpotosi.png" /><span>Real Potosi</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/universitario.png" /><span>Petrolero</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/sanjose.png" /><span>Nacional Potosí</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/realpotosi.png" /><span>La Paz F.C.</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/petrolero.png" /><span>San Jose</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/orientepetrolero.png" /><span>Universitario</span></li></a>
+					<a href=""><li><img src="/media/images/escudos/lapazfc.png" /><span>Real Guabirá</span></li></a>
+				</ul>
+			</div>
+		</div>
+
+		<!-- ********* CONTENIDO|safe|truncatechars PRINCIPAL DE LAS NOTICIAS ********* -->
+		<h1>Formulario de Contactos</h1>
+		<div id="contact">
+			<form action="" name="contact_form">
+				<article class="post bd-blue">
+					<span class="category bg-blue" id="lbl">Nombre Completo: </span><br />
+					<input class="inpt" type="text" required name="nombre">
+				</article>
+
+				<article class="post bd-blue">
+					<span class="category bg-blue" id="lbl">Correo: </span><br />
+					<input class="inpt" type="email" required name="correo">
+				</article>
+				
+				<article class="post bd-blue">
+					<span class="category bg-blue" id="lbl">Tel&eacute;fono: </span><br />
+					<input class="inpt" type="text" required name="telf">
+				</article>
+				
+				<article class="post bd-blue">
+					<span class="category bg-blue" id="lbl">Comentario: </span><br />
+					<textarea class="inpt_t" name="coment" required id="" cols="30" rows="10"></textarea>
+				</article>
+
+				<input id="sbmt" type="submit" value="Enviar Comentario">
+			</form>
+		</div>
+	{% endblock %}
+	
+</section>	
+<!-- .......................... CONTENIDO|safe|truncatechars MULTIMEDIA Y NOTICIAS CORTAS ........................ -->
+{% block multimedia %}
+	<section id="multimedia"  class="gallery clearfix">
+		<article class="main-title mtlarge">
+			<span class="izq" id="botonprueba">Fotos de la semana</span>
+			<span class="der"></span>
+		</article>
+		<article class="media">
+			<ul id="semana" >
+				{% if semana %}
+					{% for s in semana %}
+					<li>
+						<a href="/media/{{ s.imagen }}" rel="prettyPhoto[gallery2]">
+							<img src="/media/{{ s.imagen }}" />
+							<span class="title">{{ s.titulo }}</span>
+							<span class="desc">{{ s.descripcion }}</span>
+						</a>
+					</li>
+					{% endfor %}
+				{% else %}
+					<h3>No tienes ninguna foto de semana</h3>
+				{% endif %}
+			</ul>
+			<a href="" class="prev"></a>
+			<a href="" class="next"></a>
+		</article>
+		
+		<!--<article id="shorts">
+			<h3>Aca Van las noticias Cortas</h3>
+		</article>
+		-->
+		<article class="main-title mtlarge">
+			<span class="izq">Diosas</span>
+			<span class="der"></span>
+		</article>
+
+		<article class="media">
+			<ul id="chicas">
+				{% if chicas %}
+					{% for c in chicas %}
+					<li>
+						<a href="/media/{{ c.imagen }}" rel="prettyPhoto[gallery1]">							
+							<img src="/media/{{ c.imagen }}" />
+							<span class="title">{{ c.titulo }}</span>
+							<span class="desc">{{ c.descripcion }}</span>
+						</a>
+					</li>
+					{% endfor %}
+				{% else %}
+					<h3>No tienes ninguna foto de chicas</h3>
+				{% endif %}
+			</ul>
+			<a href="#" class="prev"></a>
+			<a href="#" class="next"></a>
+		</article>
+		<article class="sponsors"></article>
+	</section>
+{% endblock %}
+

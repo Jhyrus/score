@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset='utf-8'>
+
+
+<head>
+<title>{% block title%}{% endblock %}</title>
+<!-- ======================================== CSS  ======================================== -->
+	<link rel="stylesheet" type="text/css" href="/media/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/skyn.blue.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/prettyPhoto.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/main.css">
+	{% block style %}{% endblock %}
+
+
+
+<!-- ======================================== JAVASCRIPT ======================================== -->
+	<script type="text/javascript" src="/media/js/less.js"></script>
+	<script type="text/javascript" src="/media/js/jquery.js"></script>
+	<script type="text/javascript" src="/media/js/jplayer.js"></script>
+	<script type="text/javascript" src="/media/js/underscore.js"></script>
+	<script type="text/javascript" src="/media/js/backbone.js"></script>
+	<script type="text/javascript" src="/media/js/prettyPhoto.js"></script>
+	<script type="text/javascript" src="/media/js/main.js"></script>
+
+	{% block script %}{% endblock %}
+
+<!-- ======================================== CAROUCEL  ======================================== -->
+<script type="text/javascript" language="javascript" src="/media/js/caroucel/carouFredSel.js"></script>
+
+<!-- <script type="text/javascript" language="javascript" src="/media/js/caroucel/mousewheel.js"></script>
+<script type="text/javascript" language="javascript" src="/media/js/caroucel/touchSwipe.js"></script>
+<script type="text/javascript" language="javascript" src="/media/js/caroucel/transit.js"></script>
+<script type="text/javascript" language="javascript" src="/media/js/caroucel/debounce.js"></script>
+ -->
+
+<!--   +++++++++++++++++++++++++++++++++++++++    CSS  +++++++++++++++++++++++++++++++++++++++    -->
+</head>
+<body>
+	<!-- .............................. CABECERA .............................. -->
+	<header>
+		<!-- ********* LOGOTIPO ********* -->
+		<div id="logo">
+			<a href="/"><img src="/media/images/logo.png"/></a>
+		</div>
+		<div id="zocial">
+			<a href="https://www.facebook.com/pages/Futbolmania-Bolivia/142556685758680?fref=ts" target="_blank"><img src="/media/images/icons/facebook.png" alt="facebook Futbolamania"/></a>
+			<a href="https://twitter.com/Futbolmania01" target="_blank"><img src="/media/images/icons/twitter.png" alt="twitter Futbolamania"/></a>
+			<img src="/media/images/icons/youtube.png"  alt="youtube Futbolmania" tittle="youtube Futbolmania"/>
+		</div>
+		<div id="radio">
+			<a href="/radio/"><img src="/media/images/radio1.png" width="150" heigth="100" alt="Radio en Internet"/></a>
+		</div>
+		<!-- ********* BARRA DE NAVEGACION ********* -->
+		<div id="advertiser">
+			{# <article><img src="/media/{{ top.imagen }}" /></article>			 #}
+		</div>
+		<div id="search">
+			<form action="" name="searchform">
+				<input type="text" class="search" placeholder="Buscar...">
+				<input type="submit" class="btn" value="Ir">
+			</form>
+		</div>
+		<nav>
+			<ul>
+				<a href="/"><li class="current">INICIO</li></a>
+				<a href="/lpfb/"><li>LPFB</li></a>
+				<a href="/seleccion/"><li>SELECCIÓN</li></a>
+				<a href="/opinion/"><li>OPINIÓN</li></a>
+				<a href="/internacional/"><li>INTERNACIONAL</li></a>
+				<a href="/multimedia/"><li>MULTIMEDIA</li></a>
+				<a target="_blank" href="http://www.facebook.com"><li>PRONOSTICO</li></a>
+				<a href="/contact/"><li>CONTACTO</li></a>
+			</ul>
+		</nav>
+		<!-- ********* PUBLICIDAD CABECERA ********* -->
+	</header>
+	<!-- .............................. CONTENIDO PRINCIPAL .............................. -->
+	<section id="content">
+		<!-- ********* PUBLICIDAD IZQUIERDA ********* -->
+		<aside class="ads">
+			{% if izq %}
+				{% for i in izq %}
+					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
+				{% endfor %}
+			{% else %}
+				<h3>No hay anuncios que mostrar</h3>
+			{% endif %}
+		</aside>
+		<!-- ********* CONTENIDO PRINCIPAL ********* -->
+		<div id="main">
+			{% block content %}
+
+			{% endblock %}
+		</div>
+		<!-- ********* PUBLICIDAD DERECHA ********* -->
+		<aside class="ads">
+			{% if der %}
+				{% for i in der %}
+					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
+				{% endfor %}
+			{% else %}
+				<h3>No hay anuncios que mostrar</h3>
+			{% endif %}
+		</aside>
+	</section>
+	<!-- .......................... CONTENIDO MULTIMEDIA Y NOTICIAS CORTAS ........................ -->
+	{% block multimedia %} {% endblock %}
+	<!-- ....................................... PIE DE PAGINA  ................................... -->
+	<footer>
+		<div id="sponsors">
+		</div>
+		<ul>
+			<li>Inicio</li>
+			<li>RSS</li>
+			<li>Términos y Condiciones</li>
+			<li>Nuestro Equipo</li>
+			<li>Publicidad</li>
+			<li>Mapa del Sitio</li>
+			<li>Contacto</li>
+			<li>Ayuda</li>
+		</ul>
+	</footer>
+
+	<div class="avgrund-cover"></div>
+
+	<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+	</script>
+</body>
+</html>

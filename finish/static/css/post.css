@@ -1,0 +1,122 @@
+body  #content{
+	/*background: black;*/
+	height: auto;
+}
+
+body #main #new, body #main aside, body #main #ads{
+	float: left;
+	height: auto;
+	margin-top: 10px;
+}
+
+body #main #new{
+	width: 60%;
+}
+
+body #main #new article{
+	width: 96%;
+	margin-left: 2%;
+}
+
+	#new article .category{
+		/*background: black;*/	
+		color: white;
+		display: block;
+		padding: 5px 10px;	
+		font-weight: 800;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	#new article .title{
+		background: white;
+		color: 	black;
+		font-family: 'Oswald';
+		font-weight: 800;
+		font-size: 22px;
+		display: block;
+		padding: 10px 15px;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+	}
+	#new article figure{
+		background: green;
+		border: 10px solid white;
+		height: 400px;
+		position: relative;
+		width: 100%;		
+	}
+		#new article figure img{
+			border: 2% solid white;
+			height: 100%;
+			width: 100%;
+		}
+		#new article figure figcaption{
+			background: rgba(0,0,0,0.7);
+			color: white;
+			bottom: 0;
+			height: auto;
+			position: absolute;
+			width: 100%;
+		}
+		#new article figure figcaption *{display: block;}
+
+		#new article figure figcaption .desc{
+			padding: 5px 10px;
+		}
+	
+		#new article figure figcaption .date, #new article figure figcaption .autor{
+			background: black;
+			color: white;
+			display: block;
+			font-size: 12px;
+			font-weight: 800;
+			padding: 3px 15px;
+			float: right;
+			text-align: center;
+			width: auto;			
+		}
+		#new article figure figcaption .date{
+			float: left;
+		}
+		#new article figure figcaption .autor{
+			float: right;
+		}
+	#new article p{
+		background: white;
+		font-size: 14px;
+		line-height: 16px;
+		padding: 10px 15px;
+	}
+
+	#new  aside{
+		display: none;
+		background: green;
+	}
+
+/* ANUNCIOS */
+body #main #ads{
+	/*background: black;*/
+	width: 40%;
+}
+
+body #main #ads #central{
+	/*background: gray;*/
+	margin-left: 0;
+	display: block;
+	height: 350px;
+	width: 96%;
+}
+body #main #ads #rect{
+	/*background: green;*/	
+	display: block;
+	height: 150px;
+	margin-top: 10px;
+	width: 96%;
+}
+
+body #main #ads #video{
+	margin-left: 5%;
+	width: 95%;
+}
