@@ -1,0 +1,45 @@
+
+
+           ,-----. ,--.                               ,--.
+          '  .--.//   |     ,---. ,---. ,--,--,--.    |  |-.  ,---.
+          |  |    `|  |    | .--'| .-. ||        |    | .-. '| .-. |
+          '  '--'\ |  |.--.\ `--.' '-' '|  |  |  |.--.| `-' |' '-' '
+           `-----' `--''--' `---' `---' `--`--`--''--' `---'  `---'
+
+
+    This app was built by C1.com.bo a company of engineers, designers,
+    enthusiasts, entrepreneurs and investors, without them projects like
+    this would not be possible
+
+    If you'd like to know more about the people that made C1.com.bo, go to
+    c1.com.bo/organizacion.html or c1.com.bo/trabajo.html
+
+    The following mentions are for the team that is directly involved with
+    the success of this site, to all of them Thank you.
+
+    
+
+/* --- TEAM ----------------------------------------------------------------- */
+
+
+  Mario César Señoranis Ayala (CEO / Developer)
+  Twitter: @mariocesar_bo
+  Location: Santa Cruz de la Sierra, BO
+
+
+  Alejandro Oropeza Perez (Frontend Developer / Designer)
+  Location: Santa Cruz de la Sierra, BO
+
+
+/* --- THANKS --------------------------------------------------------------- */
+
+
+
+/* --- SITE ----------------------------------------------------------------- */
+
+  Last update: 2013/02/27
+  Standards:   HTML5, CSS3
+  Components:  Django, Backbone.js, Compass, Twitter Bootstrap, jQuery
+  Language:    English, Castellano
+  IDE:         Sublime Text 2, VIM, PyCharm
+

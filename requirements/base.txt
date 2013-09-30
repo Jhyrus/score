@@ -1,0 +1,12 @@
+Django
+
+## Libs
+psycopg2
+docutils
+yuicompressor
+
+## Tools
+Mercurial
+Fabric
+ipdb
+ipython
