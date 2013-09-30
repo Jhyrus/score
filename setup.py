@@ -1,16 +1,10 @@
-# -*- encoding:utf8 -*-
+# -*- encoding: utf8 -*-
 import os
 from email.utils import parseaddr
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.md')).read()
-
-raise RuntimeError(
-    "Needs author, email and version, edit the setup.py"
-    "file and remove this Exception."
-)
-
 author, author_email = parseaddr("Author <email>")  # Edit
 version = "0.1"  # Edit
 url = 'http://github.com/xiberty/finish'  # Edit

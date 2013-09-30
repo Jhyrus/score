@@ -2,6 +2,6 @@
 -r project.txt
 
 ## Development Tools
-django-debug-toolbar  # Toold for debugging
-django-template-repl  # A templating debug tool
-maildump              # Mail catcher only development mode
+#django-debug-toolbar  # Toold for debugging
+#django-template-repl  # A templating debug tool
+#maildump              # Mail catcher only development mode

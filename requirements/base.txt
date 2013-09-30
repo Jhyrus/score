@@ -6,7 +6,7 @@ docutils
 yuicompressor
 
 ## Tools
-Mercurial
+#Mercurial
 Fabric
 ipdb
 ipython

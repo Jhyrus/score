@@ -5,13 +5,13 @@ pygraphviz
 South
 django-pipeline
 django-sekizai
-django-mptt
-django_extensions
+#django-mptt
+#django_extensions
 PIL
 
 #Others
-django-hstore
-python-memcached
+#django-hstore
+#python-memcached
 
 #crisppy forms
 https://github.com/maraujop/django-crispy-forms/archive/df13e84e743fb9b6ffeeefeb47f4fd535d7ff2a3.zip#egg=django-crispy-forms
