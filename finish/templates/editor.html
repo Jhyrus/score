@@ -1,0 +1,120 @@
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="/media/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/media/css/fonts.css">
+	    <link rel="stylesheet" type="text/css" href="/media/css/editor.css">
+		{% block styles %}{% endblock %}
+		<script type="text/javascript" src="/media/js/jquery.js"></script>
+		<script type="text/javascript" src="/media/js/accordion.js"></script>
+		<script type="text/javascript" src="/media/js/underscore.js"></script>
+		<script type="text/javascript" src="/media/js/backbone.js"></script>
+		{% block scripts %}{% endblock %}
+    </head>
+<body>
+	<header>
+		<span>Editores - {% block area %}{% endblock %}</span>
+		<img src="/media/images/logo.jpg" alt="Logotipo" id="logo">
+	</header>
+	<section>
+		<nav>
+			<figure>
+				<img src="/media/uploads/users/yo.jpg" alt="">
+				<figcaption>Victor Aguilar</figcaption>
+			</figure>
+			<ul class="accordion dark" data-role="accordion">
+				<li class="active">
+					<a href="#">Inicio</a>
+					<div>
+						<ul>
+							<a href="{% url vista_editor %}">
+								<li><i class="icon-user"></i>Perfil</li>
+							</a>
+							<li><i class="icon-exit"></i>Salir</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Caricatura</a>
+					<div>
+						<ul>
+							<a href="{% url vista_caricatura %}">
+								<li><i class="icon-list"></i>Listar</li>
+							</a>
+							<li><i class="icon-plus-2"></i> Agregar</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Foto</a>
+					<div>
+						<ul>
+							<a href="{% url vista_foto %}">
+								<li><i class="icon-list"></i>Listar</li>
+							</a>
+							<li><i class="icon-plus-2"></i> Agregar</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Frase</a>
+					<div>
+						<ul>
+							<a href="{% url vista_frase %}">
+								<li><i class="icon-list"></i>Listar</li>
+							</a>
+							<li><i class="icon-plus-2"></i> Agregar</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Post</a>
+					<div>
+						<ul>
+							<a href="{% url vista_post %}">
+								<li><i class="icon-list"></i>Listar</li>
+							</a>
+							<li><i class="icon-plus-2"></i> Agregar</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Video</a>
+					<div>
+						<ul>
+							<a href="{% url vista_video %}">
+								<li><i class="icon-list"></i>Listar</li>
+							</a>
+							<li><i class="icon-plus-2"></i> Agregar</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Timelines</a>
+					<div>
+						<ul>
+							<a href="{% url vista_timeline %}">
+								<li><i class="icon-list"></i>Listar</li>
+							</a>
+							<li><i class="icon-plus-2"></i> Agregar</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+
+		</nav>
+		<article id="area">
+			{% block content %}		{% endblock %}
+		</article>		
+	</section>
+	<footer>
+	</footer>
+	<aside>
+	</aside>
+</body>
+</html>

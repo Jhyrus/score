@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>herramientas</title>
+	<script type="text/javascript" src="/media/js/jquery.js"></script>
+	<style>
+	#text{
+		height: 500px;
+		width: 500px;
+	}
+	
+	</style>
+</head>
+<body>
+	<h1>Contador de caracteres</h1>
+	<textarea name="text" id="text"></textarea>
+	<button id="contar">Contar</button>
+<script>
+	$(document).on('ready',function(){
+		$('#contar').click(function(){
+			var cant = $('#text').val().length;
+			alert('La cadena tiene '+ cant + ' letras');
+		});
+	});
+
+</script>
+
+</body>
+</html>

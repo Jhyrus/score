@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset='utf-8'>
+
+
+<head>
+<title>{% block title%}{% endblock %}</title>
+<!-- ======================================== CSS  ======================================== -->
+	<link rel="stylesheet" type="text/css" href="/media/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/skyn.blue.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/media/css/main.css">
+
+
+
+<!-- ======================================== JAVASCRIPT ======================================== -->
+	<script type="text/javascript" src="/media/js/less.js"></script>
+	<script type="text/javascript" src="/media/js/jquery.js"></script>
+	<script type="text/javascript" src="/media/js/jplayer.js"></script>
+	<script type="text/javascript" src="/media/js/underscore.js"></script>
+	<script type="text/javascript" src="/media/js/backbone.js"></script>
+
+<!-- ======================================== CAROUCEL  ======================================== -->
+	<script type="text/javascript" language="javascript" src="/media/js/caroucel/carouFredSel.js"></script>
+
+	<script type="text/javascript" language="javascript" src="/media/js/caroucel/mousewheel.js"></script>
+	<script type="text/javascript" language="javascript" src="/media/js/caroucel/touchSwipe.js"></script>
+	<script type="text/javascript" language="javascript" src="/media/js/caroucel/transit.js"></script>
+	<script type="text/javascript" language="javascript" src="/media/js/caroucel/debounce.js"></script>
+
+
+<!--   +++++++++++++++++++++++++++++++++++++++    CSS  +++++++++++++++++++++++++++++++++++++++    -->
+</head>
+<body>
+	<!-- .............................. CABECERA .............................. -->
+	<header>
+		<!-- ********* LOGOTIPO ********* -->
+		<div id="logo">
+			<img src="/media/images/logo.png"/>
+		</div>
+		<!-- ********* BARRA DE NAVEGACION ********* -->
+		<div id="advertiser">
+			<article><img src="/media/{{ top.imagen }}" /></article>			
+		</div>
+		<nav>
+			<ul>
+				<a href=""><li class="current">INICIO</li></a>
+				<a href=""><li>LPFB</li></a>
+				<a href=""><li>SELECCIÓN</li></a>
+				<a href=""><li>OPINIÓN</li></a>
+				<a href=""><li>INTERNACIONAL</li></a>
+				<a href=""><li>MULTIMEDIA</li></a>
+				<a href=""><li>CONTACTO</li></a>
+			</ul>
+		</nav>
+		<div id="zocial">
+			<img src="/media/images/icons/facebookx.png" />
+			<img src="/media/images/icons/twitterx.png" />
+			<!-- <img src="/media/images/icons/rssx.png" /> -->
+		</div>
+		<!-- ********* PUBLICIDAD CABECERA ********* -->
+	</header>
+	<!-- .............................. CONTENIDO PRINCIPAL .............................. -->
+	<section id="content">
+		<!-- ********* PUBLICIDAD IZQUIERDA ********* -->
+		<aside class="ads">
+			{% if izq %}
+				{% for i in izq %}
+					<article><img src="/media/{{ i.imagen }}" /></article>		
+				{% endfor %}
+			{% else %}
+				<h3>No hay anuncios que mostrar</h3>
+			{% endif %}			
+		</aside>
+		<!-- ********* CONTENIDO PRINCIPAL ********* -->
+		<div id="main">
+			<!-- ********* NOTICIA PRINCIPAL, MAS LEIDO MAS RECIENTE,  ********* -->
+			<div id="central">
+				<!-- ********* EQUIPOS ********* -->
+				<div id="teams">
+					<span>Equipos</span>
+					<ul id="nav-teams">
+						<a href=""><li>
+							<img src="/media/images/escudos/bolivar.png" /><span>Bolivar</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/strongest.png" /><span>Strongest</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/bolivar.png" /><span>Aurora</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/strongest.png" /><span>Wilsterman</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/bolivar.png" /><span>Oriente petrolero</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/strongest.png" /><span>Real Potosi</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/bolivar.png" /><span>Petrolero</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/strongest.png" /><span>Nacional Potosí</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/bolivar.png" /><span>La Paz F.C.</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/strongest.png" /><span>San Jose</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/bolivar.png" /><span>Universitario</span>
+						</li></a>
+						<a href=""><li>
+							<img src="/media/images/escudos/strongest.png" /><span>Real Guabirá</span>
+						</li></a>
+					</ul>
+				</div>
+				<!-- ********* 3 ULTIMAS NOTICIAS DESGLOZADAS ********* -->
+				{% if posts %}
+				<div id="priority-news">
+					{% for p in posts %}
+						{% ifequal forloop.counter 2 %}
+						<article>
+							<span class="category">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<img src="/media/{{ p.imagen }}" />
+							<p>{{ p.contenido }}</p>
+						</article>
+						{% endifequal %}
+						{% ifequal forloop.counter 3 %}
+						<article>
+							<span class="category">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<img src="/media/{{ p.imagen }}" />
+							<p>{{ p.contenido }}</p>
+						</article>
+						{% endifequal %}
+						{% ifequal forloop.counter 4 %}
+						<article>
+							<span class="category">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<img src="/media/{{ p.imagen }}" />
+							<p>{{ p.contenido }}</p>
+						</article>
+						{% endifequal %}					
+					{% endfor %}
+				</div>
+				<!-- ********* NOTICIA CENTRAL, CON IMAGEN Y DESCRICION ********* -->
+				<div id="main-new">
+					{% for p in posts %}
+						{% ifequal forloop.counter 1 %}
+							<figure>
+								<img src="/media/{{ p.imagen }}" />
+								<figcaption>
+									<span class="category">{{ p.categoria }}</span>
+									<span class="title">{{ p.titulo }}</span>
+									<p>{{ p.contenido }}</p>
+								</figcaption>
+							</figure>
+						{% endifequal %}					
+					{% endfor %}
+				</div>
+				{% else %}
+					<h4>No existen publicaciones</h4>
+				{% endif %}
+				<!-- ********* LO MAS LEIDO Y LO MAS RECIENTE ********* -->
+				<div id="lasts-recents">
+					<div id="nav">
+						<a href="#" id="lec" class="current">Mas Leido</a>
+						<a href="#" id="rec">Mas Reciente</a>
+					</div>
+					<!-- ++++++ LO MAS LEIDO ++++++ -->
+					<div id="lasts">
+						<article>
+							<img src="/media/images/s2.jpg" />
+							<span class="title">Selección</span>
+							<span class="date">13 de Abril de 2013</span>
+						</article>
+						<article>
+							<img src="" />
+							<span class="title">Selección</span>
+							<span class="date">13 de Abril de 2013</span>
+						</article>
+						<article>
+							<img src="" />
+							<span class="title">Selección</span>
+							<span class="date">13 de Abril de 2013</span>
+						</article>
+						<article>
+							<img src="" />
+							<span class="title">Selección</span>
+							<span class="date">13 de Abril de 2013</span>
+						</article>
+						<article>
+							<img src="" />
+							<span class="title">Selección</span>
+							<span class="date">13 de Abril de 2013</span>
+						</article>
+					</div>
+					<!-- ++++++ LO MAS RECIENTE ++++++ -->
+					<div id="recents">
+						<!-- Aqui van mas articulos -->
+					</div>
+				</div>
+			</div>
+
+			<!-- ********* CONTENIDO PRINCIPAL DE LAS NOTICIAS ********* -->
+			<div id="news">
+				<!-- ++++++ POSTS Y ARTICULOS ++++++ -->
+				<div id="posts">
+				{% if posts %}
+					{% for p in posts %}
+						{% ifequal forloop.counter 5 %}
+							<article class="post bd-red">
+								<span class="category bg-red">{{ p.categoria }}</span>
+								<figure>
+									<img src="/media/{{ p.imagen }}" />
+									<figcaption> {{ p.titulo }} </figcaption>
+								</figure>
+								<p>{{ p.contenido }}</p>
+							</article>								
+						{% endifequal %}
+						{% ifequal forloop.counter 6 %}
+							<article class="post bd-blue">
+								<span class="category bg-blue">{{ p.categoria }}</span>
+								<figure>
+									<img src="/media/{{ p.imagen }}" />
+									<figcaption>{{ p.titulo }}</figcaption>
+								</figure>
+								<p>{{ p.contenido }}</p>
+							</article>
+						{% endifequal %}
+						{% ifequal forloop.counter 7 %}
+							<article class="mini-post bd-green">
+								<span class="category bg-green">{{ p.categoria }}</span>
+								<span class="title">{{ p.titulo }}</span>
+								<p>{{ p.contenido }}</p>
+							</article>
+						{% endifequal %}
+						{% ifequal forloop.counter 8 %}
+							<article class="mini-post bd-yellow">
+								<span class="category bg-yellow">{{ p.categoria }}</span>
+								<span class="title">{{ p.titulo }}</span>
+								<p>{{ p.contenido }}</p>
+							</article>
+							<article class="post-rect">
+								<figure>
+									<img src="/media/images/avatar.jpg" />
+									<span class="acount">@jvacx</span>
+									<figcaption>
+										Este es el tuit de un famoso
+									</figcaption>
+								</figure>
+								<figure>
+									<img src="/media/images/avatar.jpg" />
+									<span class="acount">@jvacx</span>
+									<figcaption>
+										Este es el tuit de un famoso
+									</figcaption>
+								</figure>
+								<figure>
+									<img src="/media/images/avatar.jpg" />
+									<span class="acount">@jvacx</span>
+									<figcaption>
+										Este es el tuit de un famoso
+									</figcaption>
+								</figure>
+							</article>
+						{% endifequal %}
+					{% ifequal forloop.counter 9 %}
+						<article class="post bd-purple">
+							<span class="category bg-purple">{{ p.categoria }}</span>
+							<figure>
+								<img src="/media/{{ p.imagen }}" />
+								<figcaption>{{ p.titulo }}</figcaption>
+							</figure>
+							<p>{{ p.contenido }}</p>
+						</article>
+					{% endifequal %}
+					{% ifequal forloop.counter 10 %}
+						<article class="post bd-skyblue">
+							<span class="category bg-skyblue">{{ p.categoria }}</span>
+							<figure>
+								<img src="/media/{{ p.imagen }}" />
+								<figcaption>{{ p.titulo }}</figcaption>
+							</figure>
+							<p>{{ p.contenido }}</p>
+						</article>
+					{% endifequal %}
+					{% ifequal forloop.counter 11 %}
+						<article class="mini-post bd-skygreen">
+							<span class="category bg-skygreen">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<p>{{ p.contenido }}</p>
+						</article>
+					{% endifequal %}
+					{% ifequal forloop.counter 12 %}
+						<article class="mini-post bd-blue">
+							<span class="category bg-blue">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<p>{{ p.contenido }}</p>
+						</article>
+						<article class="post-rect">
+							<figure>
+								<img src="/media/images/avatar.jpg" />
+								<span class="acount">@jvacx</span>
+								<figcaption>
+									Este es el tuit de un famoso
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="/media/images/avatar.jpg" />
+								<span class="acount">@jvacx</span>
+								<figcaption>
+									Este es el tuit de un famoso
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="/media/images/avatar.jpg" />
+								<span class="acount">@jvacx</span>
+								<figcaption>
+									Este es el tuit de un famoso
+								</figcaption>
+							</figure>
+						</article>
+					{% endifequal %}
+					{% ifequal forloop.counter 13 %}
+						<article class="post bd-red">
+							<span class="category bg-red">{{ p.categoria }}</span>
+							<figure>
+								<img src="/media/{{ p.imagen }}" />
+								<figcaption>{{ p.titulo }}</figcaption>
+							</figure>
+							<p>{{ p.contenido }}</p>
+						</article>
+					{% endifequal %}
+					{% ifequal forloop.counter 14 %}
+						<article class="post bd-purple">
+							<span class="category bg-purple">{{ p.categoria }}</span>
+							<figure>
+								<img src="/media/{{ p.imagen }}" />
+								<figcaption>{{ p.titulo }}</figcaption>
+							</figure>
+							<p>{{ p.contenido }}</p>
+						</article>
+					{% endifequal %}	
+					{% ifequal forloop.counter 15 %}	
+						<article class="mini-post bd-yellow">
+							<span class="category bg-yellow">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<p>{{ p.contenido }}</p>
+						</article>
+					{% endifequal %}
+					{% ifequal forloop.counter 16 %}
+						<article class="mini-post bd-blue">
+							<span class="category bg-blue">{{ p.categoria }}</span>
+							<span class="title">{{ p.titulo }}</span>
+							<p>{{ p.contenido }}</p>
+						</article>
+						<div id="paginator">
+							<ul>
+								<li><img src="/media/images/icons/first.png" /></li>
+								<li><img src="/media/images/icons/left.png" /></li>
+								<li><img src="/media/images/icons/basic.png" /><span>10</span></li>
+								<li><img src="/media/images/icons/basic.png" /><span>2</span></li>
+								<li><img src="/media/images/icons/basic.png" /><span>3</span></li>
+								<li><img src="/media/images/icons/pagins.png" /></li>
+								<li><img src="/media/images/icons/right.png" /></li>
+								<li><img src="/media/images/icons/last.png" /></li>
+							</ul>
+						</div>
+					{% endifequal %}
+					{% endfor %}
+				{% else %}
+					<h3>NO hay POSTS publicados</h3>
+				{% endif %}
+				</div>
+
+				<!-- ++++++ ANUNCIOS, VIDEOS, CUIOSIDADES ++++++ -->
+
+				<div id="publications">
+					<article class="main-title">
+						<span class="izq">Anunciantes</span>
+						<span class="der">contactos</span>
+					</article>
+					<article class="large">
+						<div class="ad-large bd-gray">
+							{% if central %}
+								<img src="/media/{{ central.imagen }}" class="img-ad" />
+							{% else %}
+								<img src="/media/images/anuncio.jpg" class="img-ad" />
+							{% endif %}
+						</div>
+						<div id="caricatura" class="bd-darkred">
+							{% if caricatura %}
+								<span class="bg-darkred">Caricatura del dia</span>
+								<img src="/media/{{ caricatura.imagen }}" />
+							{% else %}
+								<h3>No hay Caricaturas que mostrar....!!!</h3>
+							{% endif %}
+						</div>
+						<div id="concurso" class="bd-darkgreen">
+							<img src="/media/images/encuesta.jpg" />
+							<span class="bg-darkgreen">Participa y gana</span>
+						</div>
+					</article>
+					<article class="small">
+						{% if central_min %}
+							{% for c in central_min %}
+								<div class="ad-small"><img src="/media/{{ c.imagen }}" class="img-ad" /></div>
+							{% endfor %}
+						{% else %}
+							<div class="ad-small"><img src="/media/images/anuncio.jpg" class="img-ad" /></div>
+							<div class="ad-small"><img src="/media/images/anuncio.jpg" class="img-ad" /></div>
+							<div class="ad-small"><img src="/media/images/anuncio.jpg" class="img-ad" /></div>
+						{% endif %}
+
+					</article>
+
+					<article class="main-title">
+						<span class="izq">Videos</span>
+						<span class="der">Destacados</span>
+					</article>
+
+					<article class="large">
+<!-- =============================================================================================================================================================================================================================================================================================================== -->
+						<div id="video">
+							<div id="jp_container_1" class="jp-video jp-video-360p">
+								<div class="jp-type-single">
+									<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+									<div class="jp-gui">
+										<div class="jp-video-play">
+											<a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+										</div>
+										<div class="jp-interface">
+											<div class="jp-progress">
+												<div class="jp-seek-bar">
+													<div class="jp-play-bar"></div>
+												</div>
+											</div>
+											<div class="jp-current-time"></div>
+											<div class="jp-duration"></div>
+											<div class="jp-controls-holder">
+												<ul class="jp-controls">
+													<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+													<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+													<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+													<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+													<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+													<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+												</ul>
+												<div class="jp-volume-bar">
+													<div class="jp-volume-bar-value"></div>
+												</div>
+												<ul class="jp-toggles">
+													<li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
+													<li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+													<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+													<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+												</ul>
+											</div>
+											<div class="jp-title">
+												<ul>
+													<li>Big Buck Bunny Trailer</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="jp-no-solution">
+										<span>Update Required</span>
+										To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+									</div>
+								</div>
+							</div>
+						</div>
+<!-- =============================================================================================================================================================================================================================================================================================================== -->
+						<div id="lista-video">
+							<figure>
+								<span class="icon"></span>
+								<img src="/media/uploads/videos/preloads/p1.jpg" />
+								<figcaption>
+									Falta de entrenamiento
+								</figcaption>
+							</figure>
+							<figure>
+								<span class="icon"></span>
+								<img src="/media/uploads/videos/preloads/p2.jpg" />
+								<figcaption>
+									Falta de entrenamiento
+								</figcaption>
+							</figure>
+							<figure>
+								<span class="icon"></span>
+								<img src="/media/uploads/videos/preloads/p3.jpg" />
+								<figcaption>
+									Falta de entrenamiento
+								</figcaption>
+							</figure>
+						</div>
+					</article>
+					<article class="main-title">
+						<span class="izq">Portadas</span>
+						<span class="der"></span>
+					</article>
+					<article class="small">
+						<div class="portada">
+							<span>13 de Abril del 2013</span>
+							<img src="/media/uploads/portadas/p1.jpg" />
+						</div>
+						<div class="portada">
+							<span>13 de Abril del 2013</span>
+							<img src="/media/uploads/portadas/p2.jpg" />
+						</div>
+						<div class="portada">
+							<span>13 de Abril del 2013</span>
+							<img src="/media/uploads/portadas/p3.jpg" />
+						</div>
+						<div class="portada">
+							<span>13 de Abril del 2013</span>
+							<img src="/media/uploads/portadas/p4.jpg" />
+						</div>
+					</article>
+					<article class="main-title">
+						<span class="izq">Tablas de posiciones</span>
+						<span class="der"></span>
+					</article>
+					<article class="x-large">
+						<div id="tabla">
+
+							<!-- <iframe src="http://widgets.datafactory.la/es/bolivia/posiciones.html#championship=bolivia&team=-1&lang=es&show-positionsTable=1&show-PlayedGames=1&show-Goals=1&show-AgainstGoals=1&show-WinGames=1&show-TieGames=1&show-LostGames=1&show-Diff=1&show-descentTable=1&show-DescentPlayedGames=1&show-DescentPoints=1&show-fixtureTable=1&show-nameDays=1&dateFormat=ddmm&show-goalsTable=1&show-GoalsColumnTeams=1&show-GoalsDetails=1&css-width=430&css-backgroundColor=%23ebebeb&css-textColor=%232e2e2e&css-desTxtColor=%23000000&css-lineColor=%23000000&css-desEquipoBgColor=%23F1F2F2&css-desEquipoTxtColor=%232e2e2e&css-navBgColorSel=%232e2e2e&css-navColorSel=%23ffffff&css-navBgColor=%23f2f5fa&css-navColor=%23000000&css-titleFontFamily=Verdana%2CGeneva%2Csans-serif&css-titlePoints=16&css-titleWeight=0&css-titleItalic=0&css-tabsFontFamily=Verdana%2CGeneva%2Csans-serif&css-tabsPoints=12&css-tabsWeight=1&css-tabsItalic=0&css-mainFontFamily=Verdana%2CGeneva%2Csans-serif&css-mainPoints=11&css-mainWeight=0&css-mainItalic=0&css-height=520&css-tabsColor=%23FFFFFF&css-rowColor=%23BD0926&css-textRowColor=%23FFFFFF&css-borderColor=%23D1D3D4&css-golColor=%23BD0926&css-estadoColor=%23BD0926"  frameborder="0"  width="345"  height="500"  ></iframe> -->
+
+						</div>
+						<div id="fechas">
+							<article>
+								<figure class="left">
+									<img src="/media/images/banderas/oriente.png" class="visitor" />
+									<figcaption>Bolivar</figcaption>
+								</figure>
+								<figure class="right">
+									<img src="/media/images/banderas/oriente.png" class="local" />
+									<figcaption>Oriente Petrolero</figcaption>
+								</figure>								
+								<span class="vs">vs</span>
+								<span class="fecha bg-red">13 de Abril de 2013</span>
+								<span class="hora bg-skyblue">16:30</span>
+							</article>
+							<article>
+								<figure class="left">
+									<img src="/media/images/banderas/oriente.png" class="visitor" />
+									<figcaption>Bolivar</figcaption>
+								</figure>
+								<figure class="right">
+									<img src="/media/images/banderas/oriente.png" class="local" />
+									<figcaption>Oriente Petrolero</figcaption>
+								</figure>								
+								<span class="vs">vs</span>
+								<span class="fecha bg-red">13 de Abril de 2013</span>
+								<span class="hora bg-skyblue">16:30</span>
+							</article>
+							<article>
+								<figure class="left">
+									<img src="/media/images/banderas/oriente.png" class="visitor" />
+									<figcaption>Bolivar</figcaption>
+								</figure>
+								<figure class="right">
+									<img src="/media/images/banderas/oriente.png" class="local" />
+									<figcaption>Oriente Petrolero</figcaption>
+								</figure>								
+								<span class="vs">vs</span>
+								<span class="fecha bg-red">13 de Abril de 2013</span>
+								<span class="hora bg-skyblue">16:30 - La Paz</span>
+							</article>								
+							
+						</div>
+					</article>
+					<article class="small">
+						<div id="frase">
+							<span class="title">Frase del Día</span>
+							{% if frase %}
+								<span class="autor">{{ frase.autor }}</span>
+								<span class="frase">
+									<i class="icon-left-quote"></i>
+									{{ frase.frase }}
+							{% else %}
+								Una travesía de mil millas comienza con un solo paso.<!-- Frase  por defecto-->
+							{% endif %}
+								<i class="icon-right-quote"></i>
+								</span>
+						</div>
+						<div id="agenda">
+							<span class="month">Abril 2013</span>
+							<img src="/media/images/cuaderno.png" />
+							<span class="day">15</span>
+						</div>
+					</article>
+					<article class="xm-large bd-green">
+						
+					</article>
+				</div>
+			</div>
+		</div>
+		<!-- ********* PUBLICIDAD DERECHA ********* -->
+		<aside class="ads">
+			{% if der %}
+				{% for i in der %}
+					<article><img src="/media/{{ i.imagen }}" /></article>		
+				{% endfor %}
+			{% else %}
+				<h3>No hay anuncios que mostrar</h3>
+			{% endif %}		
+		</aside>
+	</section>	
+	<!-- .......................... CONTENIDO MULTIMEDIA Y NOTICIAS CORTAS ........................ -->
+	<section id="multimedia">
+		<article class="main-title mtlarge">
+			<span class="izq" id="botonprueba">Fotos de la semana</span>
+			<span class="der"></span>
+		</article>
+		<article class="media">
+			<ul id="semana" >
+				{% if semana %}
+					{% for s in semana %}
+					<li>
+						<img src="/media/{{ s.imagen }}" />
+						<span class="title">{{ s.titulo }}</span>
+						<span class="desc">{{ s.descripcion }}</span>
+					</li>
+					{% endfor %}
+				{% else %}
+					<h3>No tienes ninguna foto de semana</h3>
+				{% endif %}
+			</ul>
+			<a href="" class="prev"></a>
+			<a href="" class="next"></a>
+		</article>
+		
+		<article id="shorts"></article>
+		<article class="main-title mtlarge">
+			<span class="izq">Diosas</span>
+			<span class="der"></span>
+		</article>
+		<article class="media">
+			<ul id="chicas" >
+				{% if chicas %}
+					{% for c in chicas %}
+					<li class="multimex">
+						<img src="/media/{{ c.imagen }}" />
+						<span class="title">{{ c.titulo }}</span>
+						<span class="desc">{{ c.descripcion }}</span>
+					</li>
+					{% endfor %}
+				{% else %}
+					<h3>No tienes ninguna foto de chicas</h3>
+				{% endif %}
+			</ul>
+			<a href="#" class="prev"></a>
+			<a href="#" class="next"></a>
+		</article>
+		<article class="sponsors"></article>
+	</section>
+
+
+	<!-- ....................................... PIE DE PAGINA  ................................... -->
+
+
+	<footer>
+		<div id="sponsors">
+
+		</div>
+		
+	</footer>
+
+	<!-- the jScrollPane script -->
+
+
+	<script type="text/javascript" src="/media/js/main.js"></script>
+
+</body>
+</html>

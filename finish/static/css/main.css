@@ -1,0 +1,1378 @@
+/*-------------------------------------------------------------------- 
+							CONFIGURATION
+----------------------------------------------------------------------*/
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+a{
+	color: inherit;
+}
+a:visited{
+	color: inherit;
+}
+.img-ad{
+	height: 100%;
+	width: 100%;
+}
+
+#jp_container_1 *{
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+article.main-title{
+	background: black;
+	border: 4px black solid;
+	height: 40px;
+	color: white;
+	width: 99%;
+	margin-top: 5px;
+}
+article.main-title .izq, article.main-title .der{
+	height: 100%;
+	float: left;
+	font-family: 'Oswald';
+	font-size: 20px;
+	padding: 1px 15px;
+	text-transform: uppercase;
+	width: 50%;
+}
+
+article.main-title .izq{
+	background: #19385b;
+	text-align: left;
+}
+
+article.main-title .der{
+	background: #2e2e2e;
+	text-align: right;
+}
+/* .............................. CABECERA .............................. */
+/* ********* LOGO ********* */
+header{
+	border-bottom: 4px gray solid;
+}
+
+header #logo img{
+	border-radius: 15px;
+ 	display: block;
+ 	float: right;
+ 	margin-top: 5%;
+ 	margin-right: 0%;
+ 	height: 50%;
+ 	width: 90%;
+}
+
+
+header #colors{
+	height: 50px;
+	width: auto;
+	position: absolute;
+	top: 0;
+	left: -420px;
+}
+header #colors li{ 
+	display: block;
+	float: left;
+	height: 50px;
+	cursor: pointer;
+	width: 35px;
+}
+
+header #colors:hover{
+	left: 0;
+}
+
+header #colors li:last-child{
+	background: black;
+	border-radius: 0 8px 8px 0;
+	cursor: pointer;
+	padding-top: 12px;
+}
+
+header #colors li:last-child i{
+	color: white;
+	font-size: 20px;
+	display: block;	
+	text-align: center;
+}
+
+
+/* ********* BARRA DE NAVEGACION ********* */
+nav ul{
+	height: 100%;
+	position: absolute;
+	/*bottom: -25px;*/
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+nav ul li{
+	background: rgba(0,0,0,0.8);
+	border: 1px solid white;
+	color: white;
+	display: block;
+	font-family: 'Oswald';
+	font-size: 1em;
+	float: left;
+	padding: 10px 13px;
+	margin-left: 3px;
+}
+
+nav ul li.current, nav ul li:hover{
+	background: #e10e26;
+	border: 1px solid gray;
+}
+/* ********* ANNUNCIANTES CABECERA ********* */
+header #advertiser article{
+	/*background: black;*/
+	height: 100%;
+	float: left;
+	margin-left: 2px;
+	opacity: 0;
+	width: 777px;
+}
+
+header #advertiser article:hover{
+	opacity: 1;	
+}
+header #advertiser article img{
+	border: 5px solid white;
+	border-radius: 15px;
+	height: 90%;
+	margin-top: 1.5%;
+	width: 100%;
+}
+
+
+/* .............................. CONTENIDO PRINCIPAL .............................. */
+
+/* ******** CONTENIDO PRINCIPAL ******** */
+
+
+
+	/* ++++++++ ADS IZQ Y DER ++++++++ */
+	#content .ads article{
+		/*background: black;*/
+		height: 162px;
+		margin-bottom: 2px;
+		opacity: 0.3;
+		width: 100%;
+	}
+
+	#content .ads article:hover{
+		opacity: 1;
+		border: 4px solid gray;
+		-webkit-transition: all 250ms linear;
+		-moz-transition: all 250ms linear;
+		-o-transition: all 250ms linear;
+		-ms-transition: all 250ms linear;
+		transition: all 250ms linear;
+
+	}
+
+	#content .ads article img{
+		border: 1px solid white;
+		/*border-bottom: none;*/
+		height: 100%;
+		width: 100%;
+	}
+		/* ========= NOTICIA CENTRAL =========*/
+		/* +++++ EQUIPOS +++++ */
+		#main #central{
+			/*border: 5px #2e2e2e solid;*/
+		}
+		#main #central #teams{
+			border: 4px #1e1e1e solid;
+			/*border-radius: 8px;*/
+			background-image: url(../images/patterns/footer.jpg);
+			height: 50px;
+			/*height: 0;*/
+			display: block;
+			float: left;
+			margin-top: 5px;
+			overflow: hidden;
+			padding-right: 3px;
+			width: 100%;
+		}
+			#teams #nav-teams{
+				/*background-image: url(../images/patterns/black-tiles.png);*/
+				height: 100%;
+				float: right;
+				position: relative;
+				width: 70%;
+			}
+
+			#teams span{
+				background-color: #e10e26;
+				/*border-right: 2px black solid;*/
+				color: white;
+				display: block;
+				font-family: 'Oswald';
+				float: left;
+				font-size: 20px;
+				text-transform: uppercase;
+				height: 100%;
+				/*margin: 3px 0 0 5px;*/
+				text-align: center;
+				/*text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black, -1px -1px 1px black;*/
+				padding: 5px 100px;
+				width: auto;
+			}
+
+			#teams #nav-teams li{
+				/*background: white;*/
+				/*border: solid 1px gray;*/
+				/*border-radius: 5px;*/
+				float: right;
+				display: block;
+				height: 100%;
+				width: 45px;
+				z-index: 200;
+			}
+
+			#teams #nav-teams li:hover{
+				/*background: rgba(46,46,46,0.8);*/
+				border: solid 2px #2e2e2e;
+
+			}
+			
+
+			#teams #nav-teams li img{
+				display: block;
+				float: left;
+				margin: 12% 0 0 15%;
+				height: 80%;
+				width: 80%;
+			}
+			#teams #nav-teams li span{
+				color: white;
+				display: none;
+				float: left;
+				font-size: 7px;
+				height: inherit;
+				text-transform: uppercase;
+				text-align: center;
+				vertical-align: middle;
+				width: 67%;
+			}
+
+		/* +++++ NOTICIAS RECIENTES Y NOTICIA CENTRAL +++++ */
+		#central #priority-news, #central #main-new, #central #lasts-recents{
+			float: left;
+			height: 425px;
+		}
+		/* +++++ ULTIMAS 3 NOTICIAS PRINCIPALES+++++ */
+		#central #priority-news{
+			border: 5px solid #2e2e2e;
+			width: 22%;
+		}
+		#priority-news article{
+			cursor: pointer;
+			height: 31%;
+			margin-bottom: 2px;
+			position: relative;
+			width: 100%;
+		}
+
+		#priority-news article:hover{
+			background-color: rgba(255,228,155,0.8);
+		}
+			
+		#priority-news article span{
+			display: block;
+			width: 100%;
+			padding: 3px 0;
+		}
+		#priority-news article .category{
+			background: #2e2e2e;
+			color: white;
+			font-weight: 800;
+			font-size: 12px;
+			padding: 2px 15px;
+			text-transform: uppercase;
+			top: 0;
+		}
+
+		#priority-news article img{
+			border: 2px solid gray;
+			display: block;
+			height: 60px;
+			float: left;
+			margin-top: 8px;
+			width: 70px;
+		}
+		#priority-news article p{
+			font-size: 12px;
+			height: 70px;
+			line-height: 13px;
+			overflow: hidden;
+			padding: 5px 6px;
+			right: 0;
+			top: 26px;
+			width: 125px;
+		}
+		#priority-news article .title{
+			background: rgba(255,255,255,0.6);
+			border-bottom: 1px solid #c2c2c2;
+			color: #3e3e3e;
+			line-height: 15px;
+			height: 24px;
+			overflow: hidden;
+			font-size: 14px;
+			font-family: 'Oswald';
+			text-align: center;
+			padding: 6px 10px;
+		}
+		#priority-news #nav a.current{
+			background: #e10e26;
+			color: white;
+			height: 100%;
+			display: block;
+			padding: 7px 0;
+			text-align: center;
+			width: 101%;
+			font-weight: 800;	
+		}
+		
+
+		/* +++++ NOTICIA PRINCIPAL +++++ */
+		#central #main-new{
+			/*antes 56 teniendo la noticia del lado Derecho*/
+			width: 78%;
+		}
+		/*Figura central*/
+		#central #main-new figure{
+			display: block;
+			color: white;
+			height: 100%;
+			position: relative;
+			width: 100%;
+		}
+
+			#main-new figure img{
+				border-top: 5px solid #2e2e2e;
+				border-bottom: 5px solid #2e2e2e;
+				border-right: 5px solid #2e2e2e;
+				height: 100%;
+				width: 100%;
+			}
+			#main-new figure figcaption{
+				background: rgba(0,0,0,0.8);
+				bottom: 0;
+				display: block;
+				height: 160px;
+				position: absolute;
+				width: 100%;
+			}
+				#main-new figure figcaption span{
+					display: block;
+					width: 100%;
+					padding: 4px 15px;
+				}
+				/* Categoria de la imagen central*/
+				#main-new figure figcaption .category{
+					background: rgba(0,0,0,0.8);
+				}
+				/* Titulo de la imagen central*/
+				#main-new figure figcaption .title{
+					font-size: 25px;
+					font-weight: 800;
+				}
+				/* Parrafo de la noticia central*/
+				#main-new figure figcaption p{
+					padding: 4px 15px;
+					line-height: 18px;
+				}
+		/* +++++ NOTICIAS RECIENTES Y ULTIMAS NOTICIAS +++++ */
+		#central #lasts-recents{
+			border: 5px #2e2e2e solid;
+			width: 22%;
+		}
+		#lasts-recents #nav{
+			background-color: #2e2e2e;
+			font-family: 'Oswald';
+			height: 10%;
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+		#lasts-recents #nav a{
+			color: white;
+			border-bottom: 5px solid#2e2e2e;
+			display: block;
+			float: left;
+			height: 100%;
+			padding: 7px 0;
+			text-align: center;
+			width: 101%;
+		}
+		#lasts-recents #nav a:hover, #lasts-recents #nav a.current{
+			background: #e10e26;
+			
+		}
+		/* lo mas reciente y lo mas leido */
+		#lasts-recents #lasts, #lasts-recents #recents{
+			height: 90%;
+			width: 100%;
+		}
+		#lec{
+			border-right: 2px solid #2e2e2e; 
+		}
+		#rec{
+			border-left: 2px solid #2e2e2e; 
+		}
+
+		/* Articulo*/
+		#lasts-recents article{
+			border-bottom: 2px solid gray;
+			cursor: pointer;
+			height: 20%;
+			width: 100%;
+		}
+		#lasts-recents article:hover{
+			background-color: rgba(255,228,155,0.8);
+		}
+
+		#lasts-recents article img{
+			border: 2px solid gray;
+			display: block;
+			float: left;
+			height: 70%;
+			margin: 4% 0 0 3%;
+			width: 27%;
+		}
+		#lasts-recents article span{
+			display: block;
+			float: right;
+			width: 70%;
+		}
+		#lasts-recents article .title{
+			background: #cecece;
+			font-weight: 800;
+			font-size: 12px;
+			font-family: 'amaranth';
+			padding: 4px 7px;
+			margin-top: 10px;
+			text-transform: uppercase;
+		}
+		#lasts-recents article .date{
+			font-size: 12px;
+			padding: 0 7px 0 7px;
+		}
+		
+/* .......................... POSTS Y ANUNCIOS ........................ */			
+/* ******* POST CON FOTOGRAFIA ********/
+#news #posts .post{
+	float: left;
+	height: 320px;
+	margin: 1% 0 0 1%;
+	width: 48.5%;
+}	
+	/* Categoria */
+	#posts .post .category{
+		color: white;
+		font-size: 12px;
+		text-transform: uppercase;
+		display: block;
+		font-weight: 800;
+		padding: 0px 15px 6px 15px;
+		width: 100%;
+	}
+	#posts .post figure{
+		height: 65%;
+		position: relative;
+		width: 100%;
+	}
+	/* Imagen */
+	#posts .post figure img, #posts .post figure video{
+		height: 100%;
+		width: 100%;
+	}
+	/* Video */
+	#posts .post figure video{
+		background: gray;
+	}
+	/* Titulo */
+	#posts .post figure figcaption{
+		background-color: rgba(0,0,0,0.8);
+		bottom: 0;
+		color: white;
+		display: block;
+		font-family: 'Oswald';
+		text-transform: uppercase;
+		padding: 2% 5%;
+		position: absolute;
+		width: 100%;
+	}
+	/* Descripción de la noticia */
+	#posts .post p{
+		background-color: white;
+		color: #2e2e2e;
+		height: 27%;
+		font-size: 14px;
+		font-family: 'diavlo';
+		line-height: 14px;
+		overflow: hidden;
+		padding: 2% 5%;
+	}
+
+/* ******* MINI POST CON SOLO TEXTO ********/
+#news #posts .mini-post{
+	float: left;
+	height: 160px;
+	margin: 1% 0 0 1%;
+	width: 48.5%;
+}
+	/* Categoria */
+	#posts .mini-post .category{
+		color: white;
+		display: block;
+		font-weight: 800;
+		height: 14%;
+		padding: 0 5% 0.7% 5%;
+		font-size: 12px;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	/*  Titulo */
+	#posts .mini-post .title{
+		background-color: #cecece;
+		color: black;
+		display: block;
+		height: 31%;
+		font-weight: 800;
+		font-size: 17px;
+		font-family: 'Oswald';
+		line-height: 20px;
+		padding: 1% 5%;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	#posts .mini-post p{
+		background: white;
+		color: #2e2e2e;
+		height: 55%;
+		font-family: 'diavlo';
+		font-size: 14px;
+		line-height: 14px;
+		overflow: hidden;
+		padding: 1% 5%;
+	}
+
+/* ******* POST COMPLETO RECTANGULAR ********/
+#news #posts .post-rect{
+	background: red;
+	float: left;
+	margin: 1% 0 0 1%;
+	height: 150px;
+	width: 98%;
+}
+	#posts .post-rect figure{
+		border: 5px black solid;
+		border-left: none;;
+		background: gray;
+		display: block;
+		float: left;
+		height: 100%;
+		position: relative;
+		width: 33.3%;
+	}
+	#posts .post-rect figure:first-child{
+		border-left: 5px black solid;
+	}
+	/* Imagen del tuit */
+	#posts .post-rect figure img{
+		height: 100%;
+		width: 100%;
+	}
+	/* Cuenta */
+	#posts .post-rect figure .acount{
+		background: rgba(0,0,0,0.7);
+		color: white;
+		font-size: 10px;
+		padding: 2px 10px 4px 10px;
+		position: absolute;
+		top: 0;
+	}
+	/* Tuit */
+	#posts .post-rect figure figcaption{
+		background: rgba(0,0,0,0.7);
+		bottom: 0;
+		color: white;
+		font-size: 10px;
+		padding: 2px 10px 4px 10px;
+		position: absolute;
+		width: 100%;
+	}
+/*    Paginador    */
+#news #paginator{
+	/*background: #2e2e2e;*/
+	display: block;
+	float: left;
+	height: 50px;
+	margin: 5px 0 0 1%;
+	width: 98%;
+}
+#news #paginator ul{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#news #paginator ul li{
+	float: left;
+	position: relative;
+	cursor: pointer;
+}
+#news #paginator ul li span{
+	display: block;
+	font-weight: 800;
+	font-size: 22px;
+	position: absolute;
+	text-align: center;
+	top: 9px;
+	width: 100%;
+}
+
+#news #paginator img{
+	background-color: white;
+	border-radius: 50% 50%;
+	height: 48px;
+	margin: 1px;
+	width: 48px;
+}
+		
+#news #paginator ul li:hover img{
+	background-color: #008287;
+}
+
+/* .......................... ANUNCIOS (ads) ........................ */	
+/* Cajas grandes y pequeñas*/
+#news #publications .large, #news #publications .small{
+	margin-top: 5px;
+	width: 99%;
+}
+
+#news #publications .large{
+	height: 300px;
+}
+#news #publications .small{
+	height: 150px;
+}
+
+/* ******** PRIMER BLOQUE ******** */
+	#publications .large .ad-large{
+		background: white;
+		float: left;
+		height: 100%;
+		width: 65%;
+	}
+	#publications .large #caricatura, #publications .large #concurso{
+		background: white;
+		float: left;
+		height: 49%;
+		margin-left: 1%;
+		position: relative;
+		width: 33.5%;
+	}
+	/*   ----------- Caricaturas ------------  */
+
+	#publications .large #caricatura img{
+		height: 100%;
+		width: 100%;
+	}
+	/*   ----------- Descripción de la caricatura ------------  */
+
+	#publications .large #caricatura span{
+		bottom: 0;
+		color: white;
+		display: block;
+		font-family: 'Oswald';
+		padding: 7px 0;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	 #publications .large #concurso{
+	 	margin-top: 1.1%;
+	 }
+
+	 /* ----------------- CONCURSO ------------------ */
+
+
+	#publications .large #concurso img{
+		height: 100%;
+		width: 100%;
+	}
+	/*   ----------- Descripción de la caricatura ------------  */
+
+	#publications .large #concurso span{
+		bottom: 0;
+		color: white;
+		display: block;
+		font-family: 'Oswald';
+		padding: 7px 0;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
+/* ******** SEGUNDO BLOQUE ******** */
+	#publications .small .ad-small{
+		border: #2e2e2e solid 4px;
+		border-left: none;
+		float: left;
+		height: 100%;
+		width: 33.3%;
+	}
+	#publications .small .ad-small:first-child{
+		border-left: #2e2e2e solid 4px;
+	}
+
+/* ******** TERCER BLOQUE ******** */
+	#publications .large #video{
+		background: black;
+		float:left;
+		height: 100%;
+		width: 71%;
+	}
+	#publications .large #lista-video{
+		background: white;
+		float:left;
+		height: 100%;
+		margin-left: 0.8%;
+		width: 28%;
+	}
+		#publications .large #lista-video figure{
+			background: black;
+			border: 5px solid #2e2e2e;
+			border-top: none;
+			height: 33.3%;
+			position: relative;
+			width: 100%;
+		}
+		#publications .large #lista-video figure:first-child{
+			border-top: 5px solid #2e2e2e;
+		}
+
+		#publications .large #lista-video figure img{
+			height: 100%;
+			width: 100%;
+		}
+
+		#publications .large #lista-video figure .icon{
+			background: url(../images/icons/play.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			height: 35px;
+			display: block;
+			opacity: 0.5;
+			position: absolute;
+			top: 30%;
+			left: 35%;
+			width: 35px;
+		}
+		#publications .large #lista-video figure figcaption{
+			background: rgba(0,0,0,0.8);
+			color: white;
+			font-size: 9px;
+			padding: 2px 5px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+
+/* ******** CUARTO BLOQUE ******** */
+
+	#publications .small .portada{
+		border: 5px solid black;
+		cursor: pointer;
+		float: left;
+		height: 100%;
+		position: relative;
+		opacity: 0.6;
+		width: 25%;
+	}
+	#publications .small .portada:hover{
+		opacity: 1;
+	}
+	#publications .small .portada:first-child{
+		border-left: 5px solid black;
+	}
+
+	#publications .small .portada span{
+		background-color: black;
+		color: white;
+		display: block;
+		position: absolute;
+		font-size: 14px;
+		font-family:'Oswald';
+		left: 40px;
+		bottom: 55px;
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+		-webkit-transform: rotate(-90deg); 
+		-moz-transform: rotate(-90deg);	
+		width: 147px;
+	}
+
+	#publications .small .portada img{
+		height: 100%;
+		width: 100%;
+	}
+/* ******** QUINTO BLOQUE ******** */
+	#publications .x-large #tabla{
+		background: white;
+		/*border-right: none;*/
+		height: 100%;
+		float: left;
+		padding: 3px;
+		overflow: hidden;
+		width: 67%;
+	}
+	#publications .x-large #fechas{
+		border-left: 5px #2e2e2e solid;
+		height: 100%;
+		float: left;
+		width: 33%;
+	}
+
+	#publications .x-large #fechas article{
+		border-bottom: 5px solid #2e2e2e;
+		height: 33.7%;
+		position: relative;
+		width: 100%;
+	}	
+		#fechas article figure{
+			/*border: 2px solid #2e2e2e;*/
+			background: #ebebeb;
+			display: block;
+			height: 80%;
+			float: left;
+			margin-right: 2px;
+			position: relative;
+			width: 38%;
+		}
+
+		#fechas article figure img{
+			height: 57%;
+			margin: 9% 0 0 9%;
+			width: 80%;
+		}
+		#fechas article figure figcaption{
+			background: #2e2e2e;
+			color: white;
+			display: block;
+			font-size: 10px;
+			font-family: 'Oswald';
+			height: 30px;
+			line-height: 11px;
+			padding: 2px 0;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+
+		}
+		#fechas article .vs{
+			background: #ad1b00;
+			position: absolute;
+			border: 1px solid black;
+			color: white;
+			display: block;
+			font-family: 'Oswald';
+			font-size: 14px;
+			left: 55px;
+			top: 30px;
+			text-transform: lowercase; 
+			padding: 2px 4px;
+		}
+
+		#fechas article .fecha{
+			bottom: 0; 
+			left: 0;
+			color: white;
+			position: absolute;
+			font-size: 11px;
+			font-weight: 800;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 5px 0;
+			width: 77%;
+		}
+
+		#fechas article .hora{
+			color: white;
+			position: absolute;
+			font-size: 14px;
+			font-weight: 800;
+			text-transform: uppercase;
+			padding: 8px 0;
+			text-align: center;
+			right: -42px;
+			bottom: 42px;
+			-webkit-transform: rotate(-90deg); 
+			-moz-transform: rotate(-90deg);		
+			width: 77%;
+		}
+
+
+/* ******** SEXTO BLOQUE ******** */
+	#publications .small #frase{
+		border: 5px solid #2e2e2e;
+		float: left;
+		height: 100%;
+		position: relative;
+		width: 70%;
+	}
+		#publications .small #frase .title, #publications .small #frase .autor{
+			background: #2e2e2e;
+			color: white;
+			display: block;
+			font-family: 'Oswald';
+			position: absolute;
+			padding: :;px 11px;
+			text-transform: uppercase;
+			top: 0;
+		}
+		#publications .small #frase .title{
+			left: 0;
+			width: 35%;
+			
+		} 
+		#publications .small #frase .autor{
+			right: 0;
+			font-family: 'LatoHairline';
+			font-style: italic;
+			width: 65%;
+			padding: 12px 15px;
+			text-align: right;
+		}
+
+		#publications .small #frase .frase{
+			background: white;
+			color: #5e5e5e;
+			display: block;
+			font-family: 'Open Sans';
+			font-style: italic;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 18px;
+
+			position: absolute;
+			padding: 10px 15px;
+			height: 100px;
+			width: 100%;
+			bottom: 0;
+		}
+
+	#publications .small #agenda{
+		border-left: none;;
+		float: left;
+		height: 100%;
+		position: relative;
+		width: 30%;
+	}
+
+	#publications .small #agenda *{
+		display: block;
+		position: absolute;
+	}
+
+	#publications .small #agenda img{
+		height: 95%;
+		margin: 3% 0 0 5%;
+		width: 90%;
+	}
+
+	#publications .small #agenda .month{
+		background: #2e2e2e;
+		color: white;
+		font-family: 'Oswald';
+		font-weight: bold;
+		font-size: 17px;
+		text-transform: uppercase;
+		top: 32px;
+		left: 5%;
+		padding: 5px 0;
+		text-align: center;
+		width: 90%;
+		z-index: 200;
+	}
+
+	#publications .small #agenda .day{
+		color: white;
+		text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black, -1px -1px 1px black;
+		font-size: 60px;
+		font-style: bold;
+		font-weight: 800;
+		width: 100%;
+		text-align: center;
+		bottom: 10px;
+
+	}
+
+
+/* ******** SEPTIMO BLOQUE ******** */
+#publications .x-large{
+	border: 5px #2e2e2e solid;
+	height: 370px;
+	margin-top: 5px;
+	width: 99%;
+}
+#publications  .xm-large{
+	border: 5px #2e2e2e solid;
+	height: 380px;
+	margin-top: 5px;
+	width: 99%;	
+}
+article.mtlarge{
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+/* .......................... CONTENIDO MULTIMEDIA Y NOTICIAS CORTAS ........................ */
+/* ******** GALERIAS DE FOTOS, VIDEOS Y NOTICIAS CORTAS ******** */
+
+	/* ++++++++ GALERIAS MULTIMEDIA ++++++++ */
+	#multimedia .media{
+		/*background: #2e2e2e;		*/
+	}
+
+
+	#multimedia .media ul{
+		height: 100%;
+		width: auto;
+		margin: 0 auto;
+		position: relative;
+	}
+	#multimedia li{
+		border: 5px solid black;
+		float: left;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
+		height: 265px !important;
+		margin-top: 5px;
+		margin-left: 5px;
+		position: relative;
+		-webkit-transition: all 200ms linear;
+		-moz-transition: all 200ms linear;
+		-o-transition: all 200ms linear;
+		-ms-transition: all 200ms linear;
+		transition: all 200ms linear;
+		cursor: pointer;
+		width: 330px;
+	}
+	
+	#multimedia li a,#multimedia .media ul li img{
+		height: 100%;
+		width: 100%;
+	}
+	
+	#multimedia li a{
+		top: 0;
+	}
+	#multimedia .media ul li .title{
+		background: rgba(0,0,0,0.9);
+		color: white;
+		bottom: 40px;
+		font-size: 14px;
+		font-weight: 800;
+		padding: 4px 15px;
+		position: absolute;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	#multimedia .media ul li .desc{
+		background: rgba(0,0,0,0.7);
+		bottom: 0;
+		color: white;
+		font-size: 13px;
+		height: 40px;
+		padding: 4px 15px;
+		position: absolute;
+		overflow: hidden;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	/*  Controles  */
+	#multimedia a{
+		background-repeat: no-repeat;
+		background-size: 50px 50px;
+		display: block;
+		height: 50px;
+		opacity: 0.7;
+		position: absolute;
+		top: 125px;
+		width: 50px;
+		z-index: 2000;
+	}
+	#multimedia a:hover{ opacity: 1; }
+	#multimedia .prev{
+	background-image: url(../images/icons/rew.png);
+	left: 10px;
+
+	}
+	#multimedia .next{
+		background-image: url(../images/icons/fow.png);
+		right: 10px;
+	}
+	/* ========= MEDIAS	========= */
+	#multimedia #media1{
+		background: black;
+	}
+
+	/* ++++++++ NOTICIAS CORTAS ++++++++ */
+
+/* ....................................... PIE DE PAGINA  ................................... */
+
+footer ul li{
+	text-shadow: 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000, -2px -2px 2px #000;
+}
+footer ul li:hover{
+	background: white;
+	border-radius: 10px;
+	color: black;
+	cursor: pointer;
+	text-shadow: 2px 2px 2px #c4ddff, -2px 2px 2px #c4ddff, 2px -2px 2px #c4ddff, -2px -2px 2px #c4ddff;
+}
+
+/* ******** GALERIAS DE FOTOS, VIDEOS Y NOTICIAS CORTAS ******** */
+
+/*colores de borde*/
+
+.bg-red{ background-color: #d44132; }
+.bg-blue{ background-color: #3c5b9b; }
+.bg-skyblue{ background-color: #008287; }
+.bg-green{ background-color: #1e7145; }
+.bg-skygreen{ background-color: #00a300; }
+.bg-darkgreen{ background-color: #106b3a; }
+.bg-yellow{ background-color: #f4b201; }
+.bg-darkred{ background-color: #ad1b00; }
+.bg-gray{ background-color: #7c7c7c; }
+.bg-purple{ background-color: #7e3878; }
+.bg-orange{ background-color: #da532c; }
+.bg-darken{ background-color: #2e2e2e; }
+
+
+
+.bd-red{ border: #d44132 5px solid; }
+.bd-blue{ border: #3c5b9b 5px solid; }
+.bd-skyblue{ border: #008287 5px solid; }
+.bd-green{ border: #1e7145 5px solid; }
+.bd-skygreen{ border: #00a300 5px solid; }
+.bd-darkgreen{ border: #106b3a 5px solid; }
+.bd-yellow{ border: #f4b201 5px solid; }
+.bd-darkred{ border: #ad1b00 5px solid; }
+.bd-gray{ border: #7c7c7c 5px solid; }
+.bd-purple{ border: #7e3878 5px solid; }
+.bd-orange{ border: #da532c 5px solid; }
+.bd-darken{ border: #2e2e2e 5px solid; }
+
+/* ******** FORMULARIOS DE CONTACTOS ******** */
+
+/*style input*/
+#contact_form article
+	{
+		/*margin-left: 5%;*/
+	}
+#lbl
+	{
+		
+		color: white;
+		font-weight: bold;
+	}
+.inpt, .inpt_t
+	{
+		padding: 8px;
+		margin: 0;
+		width: 400px;
+		height: 40px;
+		margin-top: 20px;
+		margin-bottom: 8px;
+		margin-left: 2%;
+		box-shadow: 0 0 5px black inset;
+	}
+.inpt_t
+	{
+		width: 700px;
+		height: 140px;
+	}
+#sbmt
+	{
+		float: right;
+		margin-right: 1%;
+		margin-left: 35%;
+		margin-top: 1%;
+		margin-top: 1%;
+		background-color: #e10e26;
+		/*border-right: 2px black solid;*/
+		color: white;
+		display: block;
+		font-family: 'Oswald';
+		float: left;
+		font-size: 20px;
+		text-transform: uppercase;
+		height: 100%;
+		/*margin: 3px 0 0 5px;*/
+		text-align: center;
+		/*text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black, -1px -1px 1px black;*/
+		padding: 5px 100px;
+		width: auto;
+	}
+#sbmt:hover
+	{
+		-moz-box-shadow: 0 0 10px black;
+		-webkit-box-shadow: 0 0 10px black; 
+		-op-box-shadow: 0 0 10px black;
+		-ms-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px black;
+	}
+form article
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+	}			
+
+
+
+
+/* ++++++++ PAGINAS INTERNAS ++++++++ */
+/* ******** LPFB ******** */
+.lpfb section article
+	{
+		background-color: #ccc;
+		border: 5px solid #3c5b9b;
+		margin: 3%;
+		padding: 2%;
+	}
+#tit-art
+	{
+		font-family: 'Oswald';
+		background: #3c5b9b;
+		font-size: 1.5em;
+		color: white;
+		margin-top: -20px;
+		margin-bottom: 20px;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 40px;
+		padding-right: 5px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+#img-art
+	{
+		border: 7px solid #838493 !important;
+	}		
+.con, #datos
+	{
+		vertical-align: top;
+		display: inline-block;
+	}		
+.img-con, .con
+	{
+		vertical-align: top;
+		display: inline-block;
+		width: 20%;
+		height: 20%;
+		margin-left: 30px;
+		margin-right: 20px;
+	}	
+.con
+	{
+		color: black;	
+		width: 65%;
+		margin-left: 40px;
+	}
+
+
+/** +++++++++++ Opinion +++++++++++++++ **/
+.datos, .opin
+	{	
+		vertical-align: top;
+		display: inline-block;
+	}
+.opin 
+	{	
+		margin-right: 5%;
+		margin-left: 5%;
+		width: 75%;
+	}
+#img-op
+	{
+		border: 7px solid #838493 !important;
+	}			
+.opin .autor
+	{
+		padding: 6px;
+		font-size: 1.2em;
+		color: #C0392B;
+		font-weight: 800;
+	}
+.autor span
+	{	
+		margin-right: 1%;
+		color: black;
+	}
+.tema span
+	{
+		margin-right: 1%;
+		color: black;
+	}		
+.opin .tema
+	{
+		padding: 6px;
+		font-size: 1.2em;
+		color: #E74C3C;
+		font-weight: 800;
+	}
+#fecha 
+	{
+		background-image: url(../images/calendar.png);	
+	}	
+#fecha #anio
+	{
+		padding-left: 22%;
+		padding-top: 10%;
+	}
+#fecha #dia
+	{
+		padding-left: 12%;
+		margin-top: -10%;
+	}	
+#fecha #anio #mes
+	{	
+		vertical-align: top;
+		display: inline-block;
+	}			
+#fecha #dia
+	{
+		display: block;
+		font-size: 4em;
+	}	
+.parrafo{
+	display: none !important;
+}	
