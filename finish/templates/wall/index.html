@@ -4,7 +4,7 @@
 {% block style %}{% endblock %}
 
 	{% block content %}
-		<div id="central">		
+		<div id="central">
 			{% if posts %}
 			<div id="priority-news">
 				<div id="nav">
@@ -15,58 +15,58 @@
 					{% ifequal forloop.counter 2 %}
 					<a href="/post/{{ p.id }}/darken">
 						<article>
-							<span class="category">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<img src="/media/{{ p.imagen }}" />
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:100 }}</p>
+							<span class="category">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<img src="/media/{{ p.image }}" />
+							<p class="parrafo">{{ p.content|safe|truncatechars:100 }}</p>
 						</article>
 					</a>
 					{% endifequal %}
 					{% ifequal forloop.counter 3 %}
 					<a href="/post/{{ p.id }}/darken">
 						<article>
-							<span class="category">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<img src="/media/{{ p.imagen }}" />
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:100 }}</p>
+							<span class="category">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<img src="/media/{{ p.image }}" />
+							<p class="parrafo">{{ p.content|safe|truncatechars:100 }}</p>
 						</article>
 					</a>
 					{% endifequal %}
 					{% ifequal forloop.counter 4 %}
 					<a href="/post/{{ p.id }}/darken">
 						<article>
-							<span class="category">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<img src="/media/{{ p.imagen }}" />
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:100 }}</p>
+							<span class="category">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<img src="/media/{{ p.image }}" />
+							<p class="parrafo">{{ p.content|safe|truncatechars:100 }}</p>
 						</article>
 					</a>
-					{% endifequal %}					
+					{% endifequal %}
 				{% endfor %}
 			</div>
-			
-			<!-- ********* NOTICIA CENTRAL, CON IMAGEN Y DESCRICION ********* -->
+
+			<!-- ********* NOTICIA CENTRAL, CON image Y DESCRICION ********* -->
 			<div id="main-new">
 				{% for p in posts %}
 					{% ifequal forloop.counter 1 %}
 					<a href="/post/{{ p.id }}/darken">
 						<figure>
-							<img src="/media/{{ p.imagen }}" />
+							<img src="/media/{{ p.image }}" />
 							<figcaption>
-								<span class="category">{{ p.categoria }}</span>
-								<span class="title">{{ p.titulo }}</span>
-								<p class="parrafo">{{ p.contenido|safe|truncatechars:12 }}</p>
+								<span class="category">{{ p.category }}</span>
+								<span class="title">{{ p.title }}</span>
+								<p class="parrafo">{{ p.content|safe|truncatechars:12 }}</p>
 							</figcaption>
 						</figure>
 					</a>
-					{% endifequal %}					
+					{% endifequal %}
 				{% endfor %}
 			</div>
 			{% else %}
 				<h4>No existen publicaciones</h4>
 			{% endif %}
 			<!-- ********* LO MAS LEIDO Y LO MAS RECIENTE ********* -->
-			
+
 			<!-- ********* EQUIPOS ********* -->
 			<div id="teams">
 				<span>Equipos</span>
@@ -87,7 +87,7 @@
 			</div>
 		</div>
 
-		<!-- ********* CONTENIDO|safe|truncatechars PRINCIPAL DE LAS NOTICIAS ********* -->
+		<!-- ********* content|safe|truncatechars PRINCIPAL DE LAS NOTICIAS ********* -->
 		<div id="news">
 			<!-- ++++++ POSTS Y ARTICULOS ++++++ -->
 			<div id="posts">
@@ -96,42 +96,42 @@
 					{% ifequal forloop.counter 5 %}
 						<a href="/post/{{ p.id }}/red">
 							<article class="post bd-red">
-								<span class="category bg-red">{{ p.categoria }}</span>
+								<span class="category bg-red">{{ p.category }}</span>
 								<figure>
-									<img src="/media/{{ p.imagen }}" />
-									<figcaption> {{ p.titulo }} </figcaption>
+									<img src="/media/{{ p.image }}" />
+									<figcaption> {{ p.title }} </figcaption>
 								</figure>
-								<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 					{% endifequal %}
 					{% ifequal forloop.counter 6 %}
 						<a href="/post/{{ p.id }}/blue">
 							<article class="post bd-blue">
-								<span class="category bg-blue">{{ p.categoria }}</span>
+								<span class="category bg-blue">{{ p.category }}</span>
 								<figure>
-									<img src="/media/{{ p.imagen }}" />
-									<figcaption>{{ p.titulo }}</figcaption>
+									<img src="/media/{{ p.image }}" />
+									<figcaption>{{ p.title }}</figcaption>
 								</figure>
-								<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 					{% endifequal %}
 					{% ifequal forloop.counter 7 %}
 						<a href="/post/{{ p.id }}/green">
 							<article class="mini-post bd-green">
-								<span class="category bg-green">{{ p.categoria }}</span>
-								<span class="title">{{ p.titulo }}</span>
-								<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+								<span class="category bg-green">{{ p.category }}</span>
+								<span class="title">{{ p.title }}</span>
+								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 					{% endifequal %}
 					{% ifequal forloop.counter 8 %}
 						<a href="/post/{{ p.id }}/yellow">
 							<article class="mini-post bd-yellow">
-								<span class="category bg-yellow">{{ p.categoria }}</span>
-								<span class="title">{{ p.titulo }}</span>
-								<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+								<span class="category bg-yellow">{{ p.category }}</span>
+								<span class="title">{{ p.title }}</span>
+								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 						<article class="post-rect">
@@ -161,42 +161,42 @@
 				{% ifequal forloop.counter 9 %}
 					<a href="/post/{{ p.id }}/purple">
 						<article class="post bd-purple">
-							<span class="category bg-purple">{{ p.categoria }}</span>
+							<span class="category bg-purple">{{ p.category }}</span>
 							<figure>
-								<img src="/media/{{ p.imagen }}" />
-								<figcaption>{{ p.titulo }}</figcaption>
+								<img src="/media/{{ p.image }}" />
+								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
 				{% ifequal forloop.counter 10 %}
 					<a href="/post/{{ p.id }}/skyblue">
 						<article class="post bd-skyblue">
-							<span class="category bg-skyblue">{{ p.categoria }}</span>
+							<span class="category bg-skyblue">{{ p.category }}</span>
 							<figure>
-								<img src="/media/{{ p.imagen }}" />
-								<figcaption>{{ p.titulo }}</figcaption>
+								<img src="/media/{{ p.image }}" />
+								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
 				{% ifequal forloop.counter 11 %}
 					<a href="/post/{{ p.id }}/skygreen">
 						<article class="mini-post bd-skygreen">
-							<span class="category bg-skygreen">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<span class="category bg-skygreen">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
 				{% ifequal forloop.counter 12 %}
 					<a href="/post/{{ p.id }}/blue">
 						<article class="mini-post bd-blue">
-							<span class="category bg-blue">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<span class="category bg-blue">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 					<article class="post-rect">
@@ -226,42 +226,42 @@
 				{% ifequal forloop.counter 13 %}
 					<a href="/post/{{ p.id }}/red">
 						<article class="post bd-red">
-							<span class="category bg-red">{{ p.categoria }}</span>
+							<span class="category bg-red">{{ p.category }}</span>
 							<figure>
-								<img src="/media/{{ p.imagen }}" />
-								<figcaption>{{ p.titulo }}</figcaption>
+								<img src="/media/{{ p.image }}" />
+								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
 				{% ifequal forloop.counter 14 %}
 					<a href="/post/{{ p.id }}/purple">
 						<article class="post bd-purple">
-							<span class="category bg-purple">{{ p.categoria }}</span>
+							<span class="category bg-purple">{{ p.category }}</span>
 							<figure>
-								<img src="/media/{{ p.imagen }}" />
-								<figcaption>{{ p.titulo }}</figcaption>
+								<img src="/media/{{ p.image }}" />
+								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
-				{% endifequal %}	
-				{% ifequal forloop.counter 15 %}	
+				{% endifequal %}
+				{% ifequal forloop.counter 15 %}
 					<a href="/post/{{ p.id }}/yellow">
 						<article class="mini-post bd-yellow">
-							<span class="category bg-yellow">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<span class="category bg-yellow">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
 				{% ifequal forloop.counter 16 %}
 					<a href="/post/{{ p.id }}/blue">
 						<article class="mini-post bd-blue">
-							<span class="category bg-blue">{{ p.categoria }}</span>
-							<span class="title">{{ p.titulo }}</span>
-							<p class="parrafo">{{ p.contenido|safe|truncatechars:150 }}</p>
+							<span class="category bg-blue">{{ p.category }}</span>
+							<span class="title">{{ p.title }}</span>
+							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 					<div id="paginator">
@@ -293,7 +293,7 @@
 				<article class="large">
 					<div class="ad-large bd-gray">
 						{% if central %}
-							<img src="/media/{{ central.imagen }}" class="img-ad" />
+							<img src="/media/{{ central.image }}" class="img-ad" />
 						{% else %}
 							<img src="/media/images/anuncio.jpg" class="img-ad" />
 						{% endif %}
@@ -301,7 +301,7 @@
 					<div id="caricatura" class="bd-darkred">
 						{% if caricatura %}
 							<span class="bg-darkred">Caricatura del dia</span>
-							<img src="/media/{{ caricatura.imagen }}" />
+							<img src="/media/{{ caricatura.image }}" />
 						{% else %}
 							<h3>No hay Caricaturas que mostrar....!!!</h3>
 						{% endif %}
@@ -314,7 +314,7 @@
 				<article class="small">
 					{% if central_min %}
 						{% for c in central_min %}
-							<div class="ad-small"><img src="/media/{{ c.imagen }}" class="img-ad" /></div>
+							<div class="ad-small"><img src="/media/{{ c.image }}" class="img-ad" /></div>
 						{% endfor %}
 					{% else %}
 						<div class="ad-small"><img src="/media/images/anuncio.jpg" class="img-ad" /></div>
@@ -448,7 +448,7 @@
 							<figure class="right">
 								<img src="/media/images/banderas/oriente.png" class="local" />
 								<figcaption>Oriente Petrolero</figcaption>
-							</figure>								
+							</figure>
 							<span class="vs">vs</span>
 							<span class="fecha bg-red">13 de Abril de 2013</span>
 							<span class="hora bg-skyblue">16:30</span>
@@ -461,7 +461,7 @@
 							<figure class="right">
 								<img src="/media/images/banderas/oriente.png" class="local" />
 								<figcaption>Oriente Petrolero</figcaption>
-							</figure>								
+							</figure>
 							<span class="vs">vs</span>
 							<span class="fecha bg-red">13 de Abril de 2013</span>
 							<span class="hora bg-skyblue">16:30</span>
@@ -474,12 +474,12 @@
 							<figure class="right">
 								<img src="/media/images/banderas/oriente.png" class="local" />
 								<figcaption>Oriente Petrolero</figcaption>
-							</figure>								
+							</figure>
 							<span class="vs">vs</span>
 							<span class="fecha bg-red">13 de Abril de 2013</span>
 							<span class="hora bg-skyblue">16:30</span>
-						</article>								
-						
+						</article>
+
 					</div>
 				</article>
 				<article class="small">
@@ -508,9 +508,9 @@
 			</div>
 		</div>
 	{% endblock %}
-	
-</section>	
-<!-- .......................... CONTENIDO|safe|truncatechars MULTIMEDIA Y NOTICIAS CORTAS ........................ -->
+
+</section>
+<!-- .......................... content|safe|truncatechars MULTIMEDIA Y NOTICIAS CORTAS ........................ -->
 {% block multimedia %}
 	<section id="multimedia"  class="gallery clearfix">
 		<article class="main-title mtlarge">
@@ -522,10 +522,10 @@
 				{% if semana %}
 					{% for s in semana %}
 					<li>
-						<a href="/media/{{ s.imagen }}" rel="prettyPhoto[gallery2]">
-							<img src="/media/{{ s.imagen }}" />
-							<span class="title">{{ s.titulo }}</span>
-							<span class="desc">{{ s.descripcion }}</span>
+						<a href="/media/{{ s.image }}" rel="prettyPhoto[gallery2]">
+							<img src="/media/{{ s.image }}" />
+							<span class="title">{{ s.title }}</span>
+							<span class="desc">{{ s.description }}</span>
 						</a>
 					</li>
 					{% endfor %}
@@ -536,7 +536,7 @@
 			<a href="" class="prev"></a>
 			<a href="" class="next"></a>
 		</article>
-		
+
 		<!--<article id="shorts">
 			<h3>Aca Van las noticias Cortas</h3>
 		</article>
@@ -551,10 +551,10 @@
 				{% if chicas %}
 					{% for c in chicas %}
 					<li>
-						<a href="/media/{{ c.imagen }}" rel="prettyPhoto[gallery1]">							
-							<img src="/media/{{ c.imagen }}" />
-							<span class="title">{{ c.titulo }}</span>
-							<span class="desc">{{ c.descripcion }}</span>
+						<a href="/media/{{ c.image }}" rel="prettyPhoto[gallery1]">
+							<img src="/media/{{ c.image }}" />
+							<span class="title">{{ c.title }}</span>
+							<span class="desc">{{ c.description }}</span>
 						</a>
 					</li>
 					{% endfor %}
