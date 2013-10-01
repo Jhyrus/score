@@ -4,7 +4,7 @@ from django.views.generic import ListView
 from .models import Post
 
 class PostList(ListView):
-	template_name = "wall/index.html"
+	template_name = "home.html"
 	model = Post
 	context_object_name = 'posts'
 
@@ -12,9 +12,10 @@ class PostList(ListView):
 
 
 class ContactView(ListView):
-	template_name = "wall/contact.html"
+	template_name = "wall/index.html"
 	model = Post
-	context_object_name = 'contact'
+	context_object_name = 'posts'
+	paginate_by = 6
 
 
 class InternacionalView(ListView):
@@ -38,16 +39,16 @@ class MultimediaView(ListView):
 class OpinionView(ListView):
 	template_name = "wall/opinion.html"
 	model = Post
-	context_object_name = 'opinion'	
+	context_object_name = 'opinion'
 
 
 class RadioView(ListView):
 	template_name = "wall/radio.html"
 	model = Post
-	context_object_name = 'radio'	
+	context_object_name = 'radio'
 
 
 class SeleccionView(ListView):
 	template_name = "wall/seleccion.html"
 	model = Post
-	context_object_name = 'seleccion'					
+	context_object_name = 'seleccion'

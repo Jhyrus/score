@@ -64,15 +64,9 @@ MEDIA_URL = '/media/'
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = location('../public/static')
 
-# URL prefix for static files.
-# Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
-# Additional locations of static files
 STATICFILES_DIRS = (
-# Put strings here, like "/home/html/static" or "C:/www/django/static".
-# Always use forward slashes, even on Windows.
-# Don't forget to use absolute paths, not relative paths.
     location('static'),
 )
 
@@ -248,7 +242,8 @@ PIPELINE_YUI_JS_ARGUMENTS = '--line-break 80'
 PIPELINE_CSS = {
     'master': {
         'source_filenames': (
-            'css/application.css',
+            'css/vendor.css',
+            'css/master.css',
             ),
         'output_filename': 'css/master.min.css',
     },
@@ -258,30 +253,9 @@ PIPELINE_JS = {
     'master': {
         'source_filenames': (
             'js/jquery.js',
-            'js/jquery-ui.js',
-            'js/jquery-keylock.js',
-            'js/underscore.js',
-            'js/bootstrap-transition.js',
-            'js/bootstrap-alert.js',
-            'js/bootstrap-modal.js',
-            'js/bootstrap-dropdown.js',
-            'js/bootstrap-scrollspy.js',
-            'js/bootstrap-tab.js',
-            'js/bootstrap-tooltip.js',
-            'js/bootstrap-popover.js',
-            'js/bootstrap-button.js',
-            'js/bootstrap-collapse.js',
-            'js/bootstrap-carousel.js',
-            'js/bootstrap-typeahead.js',
-            'js/bootstrap-affix.js',
+            'js/bootstrap.js',
             ),
         'output_filename': 'js/master.min.js',
-    },
-    'application': {
-        'source_filenames': (
-            'js/application.js',
-        ),
-        'output_filename': 'js/application.min.js',
     }
 }
 

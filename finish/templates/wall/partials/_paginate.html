@@ -1,0 +1,13 @@
+{% if is_paginated %}
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li><a href="#">&laquo;</a></li>
+    {% endif %}
+    {% for page in paginator.page_range %}
+      <li><a href="#">{{page}}</a></li>
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="#">&raquo;</a></li>
+    {% endif %}
+  </ul>
+{% endif %}
