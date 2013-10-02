@@ -17,8 +17,8 @@
 						<article>
 							<span class="category">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<img src="/static/{{ p.image }}" />
-							<p class="parrafo">{{ p.content|safe|truncatechars:100 }}</p>
+							<img src="/media/{{ p.image }}" />
+							<p class="">{{ p.content|safe|truncatechars:100 }}</p>
 						</article>
 					</a>
 					{% endifequal %}
@@ -27,8 +27,8 @@
 						<article>
 							<span class="category">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<img src="/static/{{ p.image }}" />
-							<p class="parrafo">{{ p.content|safe|truncatechars:100 }}</p>
+							<img src="/media/{{ p.image }}" />
+							<p class="">{{ p.content|safe|truncatechars:100 }}</p>
 						</article>
 					</a>
 					{% endifequal %}
@@ -37,8 +37,8 @@
 						<article>
 							<span class="category">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<img src="/static/{{ p.image }}" />
-							<p class="parrafo">{{ p.content|safe|truncatechars:100 }}</p>
+							<img src="/media/{{ p.image }}" />
+							<p class="">{{ p.content|safe|truncatechars:100 }}</p>
 						</article>
 					</a>
 					{% endifequal %}
@@ -51,11 +51,11 @@
 					{% ifequal forloop.counter 1 %}
 					<a href="/post/{{ p.id }}/darken">
 						<figure>
-							<img src="/static/{{ p.image }}" />
+							<img src="/media/{{ p.image }}" />
 							<figcaption>
 								<span class="category">{{ p.category }}</span>
 								<span class="title">{{ p.title }}</span>
-								<p class="parrafo">{{ p.content|safe|truncatechars:12 }}</p>
+								<p class="">{{ p.content|safe|truncatechars:400 }}</p>
 							</figcaption>
 						</figure>
 					</a>
@@ -97,10 +97,10 @@
 							<article class="post bd-red">
 								<span class="category bg-red">{{ p.category }}</span>
 								<figure>
-									<img src="/static/{{ p.image }}" />
+									<img src="/media/{{ p.image }}" />
 									<figcaption> {{ p.title }} </figcaption>
 								</figure>
-								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+								<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 					{% endifequal %}
@@ -109,10 +109,10 @@
 							<article class="post bd-blue">
 								<span class="category bg-blue">{{ p.category }}</span>
 								<figure>
-									<img src="/static/{{ p.image }}" />
+									<img src="/media/{{ p.image }}" />
 									<figcaption>{{ p.title }}</figcaption>
 								</figure>
-								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+								<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 					{% endifequal %}
@@ -121,7 +121,7 @@
 							<article class="mini-post bd-green">
 								<span class="category bg-green">{{ p.category }}</span>
 								<span class="title">{{ p.title }}</span>
-								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+								<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 					{% endifequal %}
@@ -130,29 +130,29 @@
 							<article class="mini-post bd-yellow">
 								<span class="category bg-yellow">{{ p.category }}</span>
 								<span class="title">{{ p.title }}</span>
-								<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+								<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 							</article>
 						</a>
 						<article class="post-rect">
 							<figure>
 								<img src="/static/images/avatar.jpg" />
-								<span class="acount">@jvacx</span>
+								<span class="acount">@24-7</span>
 								<figcaption>
-									Este es el tuit de un famoso
+									twits .....
 								</figcaption>
 							</figure>
 							<figure>
 								<img src="/static/images/avatar.jpg" />
-								<span class="acount">@jvacx</span>
+								<span class="acount">@24-7</span>
 								<figcaption>
-									Este es el tuit de un famoso
+									twits .....
 								</figcaption>
 							</figure>
 							<figure>
 								<img src="/static/images/avatar.jpg" />
-								<span class="acount">@jvacx</span>
+								<span class="acount">@24-7</span>
 								<figcaption>
-									Este es el tuit de un famoso
+									twits .....
 								</figcaption>
 							</figure>
 						</article>
@@ -162,10 +162,10 @@
 						<article class="post bd-purple">
 							<span class="category bg-purple">{{ p.category }}</span>
 							<figure>
-								<img src="/static/{{ p.image }}" />
+								<img src="/media/{{ p.image }}" />
 								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
@@ -174,10 +174,10 @@
 						<article class="post bd-skyblue">
 							<span class="category bg-skyblue">{{ p.category }}</span>
 							<figure>
-								<img src="/static/{{ p.image }}" />
+								<img src="/media/{{ p.image }}" />
 								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
@@ -186,7 +186,7 @@
 						<article class="mini-post bd-skygreen">
 							<span class="category bg-skygreen">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
@@ -195,29 +195,29 @@
 						<article class="mini-post bd-blue">
 							<span class="category bg-blue">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 					<article class="post-rect">
 						<figure>
 							<img src="/static/images/avatar.jpg" />
-							<span class="acount">@jvacx</span>
+							<span class="acount">@24-7</span>
 							<figcaption>
-								Este es el tuit de un famoso
+								twits .....
 							</figcaption>
 						</figure>
 						<figure>
 							<img src="/static/images/avatar.jpg" />
-							<span class="acount">@jvacx</span>
+							<span class="acount">@24-7</span>
 							<figcaption>
-								Este es el tuit de un famoso
+								twits .....
 							</figcaption>
 						</figure>
 						<figure>
 							<img src="/static/images/avatar.jpg" />
-							<span class="acount">@jvacx</span>
+							<span class="acount">@24-7</span>
 							<figcaption>
-								Este es el tuit de un famoso
+								twits .....
 							</figcaption>
 						</figure>
 					</article>
@@ -230,7 +230,7 @@
 								<img src="/static/{{ p.image }}" />
 								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
@@ -242,7 +242,7 @@
 								<img src="/static/{{ p.image }}" />
 								<figcaption>{{ p.title }}</figcaption>
 							</figure>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
@@ -251,7 +251,7 @@
 						<article class="mini-post bd-yellow">
 							<span class="category bg-yellow">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 				{% endifequal %}
@@ -260,7 +260,7 @@
 						<article class="mini-post bd-blue">
 							<span class="category bg-blue">{{ p.category }}</span>
 							<span class="title">{{ p.title }}</span>
-							<p class="parrafo">{{ p.content|safe|truncatechars:150 }}</p>
+							<p class="">{{ p.content|safe|truncatechars:150 }}</p>
 						</article>
 					</a>
 					<div id="paginator">
@@ -292,7 +292,7 @@
 				<article class="large">
 					<div class="ad-large bd-gray">
 						{% if central %}
-							<img src="/static/{{ central.image }}" class="img-ad" />
+							<img src="/media/{{ central.image }}" class="img-ad" />
 						{% else %}
 							<img src="/static/images/anuncio.jpg" class="img-ad" />
 						{% endif %}
@@ -300,7 +300,7 @@
 					<div id="caricatura" class="bd-darkred">
 						{% if caricatura %}
 							<span class="bg-darkred">Caricatura del dia</span>
-							<img src="/static/{{ caricatura.image }}" />
+							<img src="/media/{{ caricatura.image }}" />
 						{% else %}
 							<h3>No hay Caricaturas que mostrar....!!!</h3>
 						{% endif %}
@@ -383,21 +383,21 @@
 					<div id="lista-video">
 						<figure>
 							<span class="icon"></span>
-							<img src="/static/uploads/videos/preloads/p1.jpg" />
+							<img src="/media/uploads/videos/preloads/p1.jpg" />
 							<figcaption>
 								Falta de entrenamiento
 							</figcaption>
 						</figure>
 						<figure>
 							<span class="icon"></span>
-							<img src="/static/uploads/videos/preloads/p2.jpg" />
+							<img src="/media/uploads/videos/preloads/p2.jpg" />
 							<figcaption>
 								Falta de entrenamiento
 							</figcaption>
 						</figure>
 						<figure>
 							<span class="icon"></span>
-							<img src="/static/uploads/videos/preloads/p3.jpg" />
+							<img src="/media/uploads/videos/preloads/p3.jpg" />
 							<figcaption>
 								Falta de entrenamiento
 							</figcaption>

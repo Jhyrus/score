@@ -83,10 +83,10 @@
 		<aside class="ads">
 			{% if izq %}
 				{% for i in izq %}
-					<a href="#"><article><img src="/static/{{ i.imagen }}" /></article></a>
+					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
 				{% endfor %}
 			{% else %}
-				<h3>No hay anuncios que mostrar</h3>
+					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
 			{% endif %}
 		</aside>
 		<!-- ********* CONTENIDO PRINCIPAL ********* -->
@@ -99,7 +99,7 @@
 		<aside class="ads">
 			{% if der %}
 				{% for i in der %}
-					<a href="#"><article><img src="/static/{{ i.imagen }}" /></article></a>
+					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
 				{% endfor %}
 			{% else %}
 				<h3>No hay anuncios que mostrar</h3>
