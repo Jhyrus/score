@@ -28,6 +28,33 @@
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 @font-face {
+    font-family: 'Sports';
+    src: url(/static/fonts/Sports_World-Regular.eot);
+    src: url(/static/fonts/Sports_World-Regular.eot?#iefix) format('embedded-opentype'),
+         url(/static/fonts/Sports_World-Regular.woff) format('woff'),
+         url(/static/fonts/Sports_World-Regular.ttf) format('truetype'),
+         url(/static/fonts/Sports_World-Regular.svg#amaranthregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'sport';
+    src: url(/static/fonts/sportsjersey.eot);
+    src: url(/static/fonts/sportsjersey.eot?#iefix) format('embedded-opentype'),
+         url(/static/fonts/sportsjersey.woff) format('woff'),
+         url(/static/fonts/sportsjersey.ttf) format('truetype'),
+         url(/static/fonts/sportsjersey.svg#amaranthregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
     font-family: 'amaranth';
     src: url(/static/fonts/amaranth-webfont.eot);
     src: url(/static/fonts/amaranth-webfont.eot?#iefix) format('embedded-opentype'),
