@@ -62,103 +62,6 @@ article.main-title .der{
 	background: #2e2e2e;
 	text-align: right;
 }
-/* .............................. CABECERA .............................. */
-/* ********* LOGO ********* */
-header{
-	border-bottom: 4px gray solid;
-}
-
-header #logo img{
-	border-radius: 15px;
- 	display: block;
- 	float: right;
- 	margin-top: 5%;
- 	margin-right: 0%;
- 	height: 50%;
- 	width: 90%;
-}
-
-
-header #colors{
-	height: 50px;
-	width: auto;
-	position: absolute;
-	top: 0;
-	left: -420px;
-}
-header #colors li{ 
-	display: block;
-	float: left;
-	height: 50px;
-	cursor: pointer;
-	width: 35px;
-}
-
-header #colors:hover{
-	left: 0;
-}
-
-header #colors li:last-child{
-	background: black;
-	border-radius: 0 8px 8px 0;
-	cursor: pointer;
-	padding-top: 12px;
-}
-
-header #colors li:last-child i{
-	color: white;
-	font-size: 20px;
-	display: block;	
-	text-align: center;
-}
-
-
-/* ********* BARRA DE NAVEGACION ********* */
-nav ul{
-	height: 100%;
-	position: absolute;
-	/*bottom: -25px;*/
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
-}
-
-nav ul li{
-	background: rgba(0,0,0,0.8);
-	border: 1px solid white;
-	color: white;
-	display: block;
-	font-family: 'Oswald';
-	font-size: 1em;
-	float: left;
-	padding: 10px 13px;
-	margin-left: 3px;
-}
-
-nav ul li.current, nav ul li:hover{
-	background: #e10e26;
-	border: 1px solid gray;
-}
-/* ********* ANNUNCIANTES CABECERA ********* */
-header #advertiser article{
-	/*background: black;*/
-	height: 100%;
-	float: left;
-	margin-left: 2px;
-	opacity: 0;
-	width: 777px;
-}
-
-header #advertiser article:hover{
-	opacity: 1;	
-}
-header #advertiser article img{
-	border: 5px solid white;
-	border-radius: 15px;
-	height: 90%;
-	margin-top: 1.5%;
-	width: 100%;
-}
 
 
 /* .............................. CONTENIDO PRINCIPAL .............................. */
@@ -232,7 +135,7 @@ header #advertiser article img{
 				/*margin: 3px 0 0 5px;*/
 				text-align: center;
 				/*text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black, -1px -1px 1px black;*/
-				padding: 5px 100px;
+				padding: 5px 69px;
 				width: auto;
 			}
 
@@ -329,14 +232,14 @@ header #advertiser article img{
 			width: 125px;
 		}
 		#priority-news article .title{
-			background: rgba(255,255,255,0.6);
+			background: rgba(43, 87, 151, 0.8);
 			border-bottom: 1px solid #c2c2c2;
-			color: #3e3e3e;
+			color: white;
 			line-height: 15px;
 			height: 24px;
 			overflow: hidden;
-			font-size: 14px;
-			font-family: 'Oswald';
+			font-size: 16px;
+			font-family: 'sport';
 			text-align: center;
 			padding: 6px 10px;
 		}
@@ -374,7 +277,7 @@ header #advertiser article img{
 				width: 100%;
 			}
 			#main-new figure figcaption{
-				background: rgba(0,0,0,0.8);
+				background: rgba(0,0,0,0.6);
 				bottom: 0;
 				display: block;
 				height: 160px;
@@ -388,10 +291,11 @@ header #advertiser article img{
 				}
 				/* Categoria de la imagen central*/
 				#main-new figure figcaption .category{
-					background: rgba(0,0,0,0.8);
+					background: rgba(0,0,0,0.6);
 				}
 				/* Titulo de la imagen central*/
 				#main-new figure figcaption .title{
+					font-family: 'sport';
 					font-size: 25px;
 					font-weight: 800;
 				}
@@ -515,7 +419,7 @@ header #advertiser article img{
 		bottom: 0;
 		color: white;
 		display: block;
-		font-family: 'Oswald';
+		font-family: 'sport';
 		text-transform: uppercase;
 		padding: 2% 5%;
 		position: absolute;

@@ -55,7 +55,7 @@
 							<figcaption>
 								<span class="category">{{ p.category }}</span>
 								<span class="title">{{ p.title }}</span>
-								<p class="">{{ p.content|safe|truncatechars:400 }}</p>
+								<p class="">{{ p.content|safe|truncatechars:350 }}</p>
 							</figcaption>
 						</figure>
 					</a>
@@ -71,6 +71,12 @@
 			<div id="teams">
 				<span>Equipos</span>
 				<ul id="nav-teams">
+					<div id="search">
+						<form action="" name="searchform">
+							<input type="text" class="search" placeholder="Buscar...">
+							<input type="submit" class="btn" value="Ir">
+						</form>
+					</div>
 					<a href=""><li><img src="/static/images/escudos/aurora.png" /><span>Bolivar</span></li></a>
 					<a href=""><li><img src="/static/images/escudos/blooming.png" /><span>Strongest</span></li></a>
 					<a href=""><li><img src="/static/images/escudos/bolivar.png" /><span>Aurora</span></li></a>

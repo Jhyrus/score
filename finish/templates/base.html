@@ -40,43 +40,31 @@
 </head>
 <body>
 	<!-- .............................. CABECERA .............................. -->
-	<header>
-		<!-- ********* LOGOTIPO ********* -->
-		<div id="logo">
-			<a href="/"><img src="/static/images/logo.png"/></a>
-		</div>
-		<div id="zocial">
-			<a href="https://www.facebook.com/pages/Futbolmania-Bolivia/142556685758680?fref=ts" target="_blank"><img src="/static/images/icons/facebook.png" alt="facebook Futbolamania"/></a>
-			<a href="https://twitter.com/Futbolmania01" target="_blank"><img src="/static/images/icons/twitter.png" alt="twitter Futbolamania"/></a>
-			<img src="/static/images/icons/youtube.png"  alt="youtube Futbolmania" tittle="youtube Futbolmania"/>
-		</div>
-		<div id="radio">
-			<a href="/radio/"><img src="/static/images/radio1.png" width="150" heigth="100" alt="Radio en Internet"/></a>
-		</div>
-		<!-- ********* BARRA DE NAVEGACION ********* -->
-		<div id="advertiser">
-			{# <article><img src="/static/{{ top.imagen }}" /></article> #}
-		</div>
-		<div id="search">
-			<form action="" name="searchform">
-				<input type="text" class="search" placeholder="Buscar...">
-				<input type="submit" class="btn" value="Ir">
-			</form>
-		</div>
-		<nav>
-			<ul>
-				<a href="/"><li class="current">INICIO</li></a>
-				<a href="/lpfb/"><li>LPFB</li></a>
-				<a href="/seleccion/"><li>SELECCIÓN</li></a>
-				<a href="/opinion/"><li>OPINIÓN</li></a>
-				<a href="/internacional/"><li>INTERNACIONAL</li></a>
-				<a href="/multimedia/"><li>MULTIMEDIA</li></a>
-				<a target="_blank" href="http://www.facebook.com"><li>PRONOSTICO</li></a>
-				<a href="/contact/"><li>CONTACTO</li></a>
-			</ul>
-		</nav>
-		<!-- ********* PUBLICIDAD CABECERA ********* -->
-	</header>
+	<div class="header_bg">
+		<header>
+			<div class="content_header">
+				<!-- ********* LOGOTIPO ********* -->
+				<div id="logo">24-7</div>
+				<!-- ********* BARRA DE NAVEGACION ********* -->
+				<nav>
+					<ul>
+						<a href="/"><li class="current">Inicio</li></a>
+						<a href="/lpfb/"><li>Lpfb</li></a>
+						<a href="/seleccion/"><li>Selección</li></a>
+						<a href="/opinion/"><li>Opinión</li></a>
+						<a href="/internacional/"><li>Internacional</li></a>
+						<a href="/multimedia/"><li>Multimedia</li></a>
+						<a href="/contact/"><li>Contacto</li></a>
+						<a href="/transimion/"><li>Transmisión</li></a>
+						<a href="https://www.facebook.com/pages/Futbolmania-Bolivia/142556685758680?fref=ts" target="_blank" class="sep"><img src="/static/images/icons/facebook.png" height="40" alt="facebook Futbolamania"/></a>
+						<a href="https://twitter.com/Futbolmania01" target="_blank"><img src="/static/images/icons/twitter.png" height="40" alt="twitter Futbolamania"/></a>
+						<a href="https://toutube.com" target="_blank"><img src="/static/images/icons/youtube.png" height="40" alt="youtube Futbolmania" tittle="youtube Futbolmania"/></a>
+						
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>	
 	<!-- .............................. CONTENIDO PRINCIPAL .............................. -->
 	<section id="content">
 		<!-- ********* PUBLICIDAD IZQUIERDA ********* -->
@@ -86,7 +74,7 @@
 					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
 				{% endfor %}
 			{% else %}
-					<a href="#"><article><img src="/media/{{ i.imagen }}" /></article></a>
+					<h3>No hay anuncios que mostrar</h3>
 			{% endif %}
 		</aside>
 		<!-- ********* CONTENIDO PRINCIPAL ********* -->
