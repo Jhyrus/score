@@ -41,7 +41,7 @@
 		</div>
 		<!-- ********* BARRA DE NAVEGACION ********* -->
 		<div id="advertiser">
-			<article><img src="/media/{{ top.imagen }}" /></article>			
+			<article><img src="/media/{{ top.imagen }}" /></article>
 		</div>
 		<nav>
 			<ul>
@@ -67,11 +67,11 @@
 		<aside class="ads">
 			{% if izq %}
 				{% for i in izq %}
-					<article><img src="/media/{{ i.imagen }}" /></article>		
+					<article><img src="/media/{{ i.imagen }}" /></article>
 				{% endfor %}
 			{% else %}
 				<h3>No hay anuncios que mostrar</h3>
-			{% endif %}			
+			{% endif %}
 		</aside>
 		<!-- ********* CONTENIDO PRINCIPAL ********* -->
 		<div id="main">
@@ -146,7 +146,7 @@
 							<img src="/media/{{ p.imagen }}" />
 							<p>{{ p.contenido }}</p>
 						</article>
-						{% endifequal %}					
+						{% endifequal %}
 					{% endfor %}
 				</div>
 				<!-- ********* NOTICIA CENTRAL, CON IMAGEN Y DESCRICION ********* -->
@@ -161,7 +161,7 @@
 									<p>{{ p.contenido }}</p>
 								</figcaption>
 							</figure>
-						{% endifequal %}					
+						{% endifequal %}
 					{% endfor %}
 				</div>
 				{% else %}
@@ -222,7 +222,7 @@
 									<figcaption> {{ p.titulo }} </figcaption>
 								</figure>
 								<p>{{ p.contenido }}</p>
-							</article>								
+							</article>
 						{% endifequal %}
 						{% ifequal forloop.counter 6 %}
 							<article class="post bd-blue">
@@ -347,8 +347,8 @@
 							</figure>
 							<p>{{ p.contenido }}</p>
 						</article>
-					{% endifequal %}	
-					{% ifequal forloop.counter 15 %}	
+					{% endifequal %}
+					{% ifequal forloop.counter 15 %}
 						<article class="mini-post bd-yellow">
 							<span class="category bg-yellow">{{ p.categoria }}</span>
 							<span class="title">{{ p.titulo }}</span>
@@ -543,7 +543,7 @@
 								<figure class="right">
 									<img src="/media/images/banderas/oriente.png" class="local" />
 									<figcaption>Oriente Petrolero</figcaption>
-								</figure>								
+								</figure>
 								<span class="vs">vs</span>
 								<span class="fecha bg-red">13 de Abril de 2013</span>
 								<span class="hora bg-skyblue">16:30</span>
@@ -556,7 +556,7 @@
 								<figure class="right">
 									<img src="/media/images/banderas/oriente.png" class="local" />
 									<figcaption>Oriente Petrolero</figcaption>
-								</figure>								
+								</figure>
 								<span class="vs">vs</span>
 								<span class="fecha bg-red">13 de Abril de 2013</span>
 								<span class="hora bg-skyblue">16:30</span>
@@ -569,12 +569,12 @@
 								<figure class="right">
 									<img src="/media/images/banderas/oriente.png" class="local" />
 									<figcaption>Oriente Petrolero</figcaption>
-								</figure>								
+								</figure>
 								<span class="vs">vs</span>
 								<span class="fecha bg-red">13 de Abril de 2013</span>
 								<span class="hora bg-skyblue">16:30 - La Paz</span>
-							</article>								
-							
+							</article>
+
 						</div>
 					</article>
 					<article class="small">
@@ -598,7 +598,7 @@
 						</div>
 					</article>
 					<article class="xm-large bd-green">
-						
+
 					</article>
 				</div>
 			</div>
@@ -607,13 +607,13 @@
 		<aside class="ads">
 			{% if der %}
 				{% for i in der %}
-					<article><img src="/media/{{ i.imagen }}" /></article>		
+					<article><img src="/media/{{ i.imagen }}" /></article>
 				{% endfor %}
 			{% else %}
 				<h3>No hay anuncios que mostrar</h3>
-			{% endif %}		
+			{% endif %}
 		</aside>
-	</section>	
+	</section>
 	<!-- .......................... CONTENIDO MULTIMEDIA Y NOTICIAS CORTAS ........................ -->
 	<section id="multimedia">
 		<article class="main-title mtlarge">
@@ -637,7 +637,7 @@
 			<a href="" class="prev"></a>
 			<a href="" class="next"></a>
 		</article>
-		
+
 		<article id="shorts"></article>
 		<article class="main-title mtlarge">
 			<span class="izq">Diosas</span>
@@ -671,7 +671,7 @@
 		<div id="sponsors">
 
 		</div>
-		
+
 	</footer>
 
 	<!-- the jScrollPane script -->

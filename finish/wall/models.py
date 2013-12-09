@@ -45,7 +45,7 @@ class Announcement(models.Model):
     )
 
     def save_to(self, filename):
-        ruta = "uploads/ads/%s" % filename
+        ruta = "uploads/ads/images/%s" % filename
         return ruta
 
     title = models.CharField(max_length=40)
@@ -61,6 +61,25 @@ class Announcement(models.Model):
     def __unicode__(self):
         return "%s" % self.title
 
+class Banner(models.Model):
+
+    def save_to(self, filename):
+        ruta = "uploads/banners/images/%s" % filename
+        return ruta
+
+    title = models.CharField(max_length=40)
+    date = models.DateField()
+    image = models.ImageField(upload_to=save_to)
+    link = models.CharField(max_length=400)
+
+    class Meta:
+        verbose_name = 'Banner'
+        verbose_name_plural = 'Banners'
+
+    def __unicode__(self):
+        return "%s" % self.title
+
+
 #------------------------------------------------------------------------------------------#
 #PUBLICACION
 #------------------------------------------------------------------------------------------#
@@ -68,7 +87,7 @@ class Announcement(models.Model):
 
 class Caricatura(models.Model):
     def save_to(self, filename):
-        ruta = "uploads/caricaturas/%s" % (filename)
+        ruta = "uploads/caricaturas/images/%s" % (filename)
         return ruta
 
     autor = models.ForeignKey('Autor')
@@ -104,7 +123,7 @@ class Video(models.Model):
         verbose_name_plural = 'Videos'
 
     def __unicode__(self):
-        return self.titulo
+        return self.title
 
 #------------------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------------------#

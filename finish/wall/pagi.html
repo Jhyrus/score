@@ -1,0 +1,40 @@
+<html>
+<body>
+<div id="main-new">
+				{% for p in posts.object_list %}
+
+					<a href="/post/{{ p.id }}/">
+						<figure>
+							<img src="/media/{{ p.image }}" />
+							<figcaption>
+								<span class="category">{{ p.category }}</span>
+								<span class="title">{{ p.title }}</span>
+								<p class="">{{ p.content|safe|truncatechars:450 }}</p>
+							</figcaption>
+						</figure>
+					</a>
+
+				{% endfor %}
+			</div>
+			<div class="pagination">
+			    <ul>
+			        {% if posts.has_previous %}
+			            <li><a href="?page={{ posts.previous_page_number }}">Previous</a></li>
+			        {% endif %}
+
+			        {% for pg in posts.paginator.page_number %}
+			        	{% if posts.number == pg %}
+			        		<li class="active"><a href="?page={{pg}}">{{pg}}</a></li>
+						{% else %}
+							<li><a href="?page={{pg}}">{{pg}}</a></li>
+			        	{% endif %}
+			        {% endfor %}
+
+			        {% if posts.has_next %}
+			            <li><a href="?page={{ posts.next_page_number }}">Next</a></li>
+			        {% endif %}
+
+			    </ul>
+			</div>
+			</body>
+			</html>

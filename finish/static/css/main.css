@@ -1,10 +1,10 @@
-/*-------------------------------------------------------------------- 
+/*--------------------------------------------------------------------
 							CONFIGURATION
 ----------------------------------------------------------------------*/
 *{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 	-webkit-transition: all 200ms linear;
 	-moz-transition: all 200ms linear;
 	-o-transition: all 200ms linear;
@@ -155,7 +155,7 @@ article.main-title .der{
 				border: solid 2px #2e2e2e;
 
 			}
-			
+
 
 			#teams #nav-teams li img{
 				display: block;
@@ -197,7 +197,7 @@ article.main-title .der{
 		#priority-news article:hover{
 			background-color: rgba(255,228,155,0.8);
 		}
-			
+
 		#priority-news article span{
 			display: block;
 			width: 100%;
@@ -222,14 +222,14 @@ article.main-title .der{
 			width: 70px;
 		}
 		#priority-news article p{
-			font-size: 12px;
+			font-size: 10px;
 			height: 70px;
 			line-height: 13px;
 			overflow: hidden;
 			padding: 5px 6px;
 			right: 0;
 			top: 26px;
-			width: 125px;
+			text-align: justify;
 		}
 		#priority-news article .title{
 			background: rgba(43, 87, 151, 0.8);
@@ -251,9 +251,9 @@ article.main-title .der{
 			padding: 7px 0;
 			text-align: center;
 			width: 101%;
-			font-weight: 800;	
+			font-weight: 800;
 		}
-		
+
 
 		/* +++++ NOTICIA PRINCIPAL +++++ */
 		#central #main-new{
@@ -301,8 +301,10 @@ article.main-title .der{
 				}
 				/* Parrafo de la noticia central*/
 				#main-new figure figcaption p{
+					font-size: 15px;
 					padding: 4px 15px;
 					line-height: 18px;
+					text-align: justify;
 				}
 		/* +++++ NOTICIAS RECIENTES Y ULTIMAS NOTICIAS +++++ */
 		#central #lasts-recents{
@@ -329,7 +331,7 @@ article.main-title .der{
 		}
 		#lasts-recents #nav a:hover, #lasts-recents #nav a.current{
 			background: #e10e26;
-			
+
 		}
 		/* lo mas reciente y lo mas leido */
 		#lasts-recents #lasts, #lasts-recents #recents{
@@ -337,10 +339,10 @@ article.main-title .der{
 			width: 100%;
 		}
 		#lec{
-			border-right: 2px solid #2e2e2e; 
+			border-right: 2px solid #2e2e2e;
 		}
 		#rec{
-			border-left: 2px solid #2e2e2e; 
+			border-left: 2px solid #2e2e2e;
 		}
 
 		/* Articulo*/
@@ -380,15 +382,15 @@ article.main-title .der{
 			font-size: 12px;
 			padding: 0 7px 0 7px;
 		}
-		
-/* .......................... POSTS Y ANUNCIOS ........................ */			
+
+/* .......................... POSTS Y ANUNCIOS ........................ */
 /* ******* POST CON FOTOGRAFIA ********/
 #news #posts .post{
 	float: left;
 	height: 320px;
 	margin: 1% 0 0 1%;
 	width: 48.5%;
-}	
+}
 	/* Categoria */
 	#posts .post .category{
 		color: white;
@@ -435,6 +437,7 @@ article.main-title .der{
 		line-height: 14px;
 		overflow: hidden;
 		padding: 2% 5%;
+		text-align: justify;
 	}
 
 /* ******* MINI POST CON SOLO TEXTO ********/
@@ -562,12 +565,12 @@ article.main-title .der{
 	margin: 1px;
 	width: 48px;
 }
-		
+
 #news #paginator ul li:hover img{
 	background-color: #008287;
 }
 
-/* .......................... ANUNCIOS (ads) ........................ */	
+/* .......................... ANUNCIOS (ads) ........................ */
 /* Cajas grandes y pequeñas*/
 #news #publications .large, #news #publications .small{
 	margin-top: 5px;
@@ -736,8 +739,8 @@ article.main-title .der{
 		padding: 5px;
 		text-align: center;
 		text-transform: uppercase;
-		-webkit-transform: rotate(-90deg); 
-		-moz-transform: rotate(-90deg);	
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
 		width: 147px;
 	}
 
@@ -753,7 +756,7 @@ article.main-title .der{
 		float: left;
 		padding: 3px;
 		overflow: hidden;
-		width: 67%;
+		width: 100%;
 	}
 	#publications .x-large #fechas{
 		border-left: 5px #2e2e2e solid;
@@ -767,7 +770,7 @@ article.main-title .der{
 		height: 33.7%;
 		position: relative;
 		width: 100%;
-	}	
+	}
 		#fechas article figure{
 			/*border: 2px solid #2e2e2e;*/
 			background: #ebebeb;
@@ -809,12 +812,12 @@ article.main-title .der{
 			font-size: 14px;
 			left: 55px;
 			top: 30px;
-			text-transform: lowercase; 
+			text-transform: lowercase;
 			padding: 2px 4px;
 		}
 
 		#fechas article .fecha{
-			bottom: 0; 
+			bottom: 0;
 			left: 0;
 			color: white;
 			position: absolute;
@@ -836,8 +839,8 @@ article.main-title .der{
 			text-align: center;
 			right: -42px;
 			bottom: 42px;
-			-webkit-transform: rotate(-90deg); 
-			-moz-transform: rotate(-90deg);		
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
 			width: 77%;
 		}
 
@@ -863,8 +866,8 @@ article.main-title .der{
 		#publications .small #frase .title{
 			left: 0;
 			width: 35%;
-			
-		} 
+
+		}
 		#publications .small #frase .autor{
 			right: 0;
 			font-family: 'LatoHairline';
@@ -949,7 +952,7 @@ article.main-title .der{
 	border: 5px #2e2e2e solid;
 	height: 380px;
 	margin-top: 5px;
-	width: 99%;	
+	width: 99%;
 }
 article.mtlarge{
 	width: 100%;
@@ -976,7 +979,7 @@ article.mtlarge{
 		float: left;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		box-sizing: border-box;	
+		box-sizing: border-box;
 		height: 265px !important;
 		margin-top: 5px;
 		margin-left: 5px;
@@ -989,12 +992,12 @@ article.mtlarge{
 		cursor: pointer;
 		width: 330px;
 	}
-	
+
 	#multimedia li a,#multimedia .media ul li img{
 		height: 100%;
 		width: 100%;
 	}
-	
+
 	#multimedia li a{
 		top: 0;
 	}
@@ -1008,6 +1011,7 @@ article.mtlarge{
 		position: absolute;
 		text-transform: uppercase;
 		width: 100%;
+		left: 0%;
 	}
 	#multimedia .media ul li .desc{
 		background: rgba(0,0,0,0.7);
@@ -1104,7 +1108,7 @@ footer ul li:hover{
 	}
 #lbl
 	{
-		
+
 		color: white;
 		font-weight: bold;
 	}
@@ -1149,7 +1153,7 @@ footer ul li:hover{
 #sbmt:hover
 	{
 		-moz-box-shadow: 0 0 10px black;
-		-webkit-box-shadow: 0 0 10px black; 
+		-webkit-box-shadow: 0 0 10px black;
 		-op-box-shadow: 0 0 10px black;
 		-ms-box-shadow: 0 0 10px black;
 		box-shadow: 0 0 10px black;
@@ -1158,7 +1162,7 @@ form article
 	{
 		margin-left: 10%;
 		margin-right: 10%;
-	}			
+	}
 
 
 
@@ -1190,12 +1194,12 @@ form article
 #img-art
 	{
 		border: 7px solid #838493 !important;
-	}		
+	}
 .con, #datos
 	{
 		vertical-align: top;
 		display: inline-block;
-	}		
+	}
 .img-con, .con
 	{
 		vertical-align: top;
@@ -1204,10 +1208,10 @@ form article
 		height: 20%;
 		margin-left: 30px;
 		margin-right: 20px;
-	}	
+	}
 .con
 	{
-		color: black;	
+		color: black;
 		width: 65%;
 		margin-left: 40px;
 	}
@@ -1215,12 +1219,12 @@ form article
 
 /** +++++++++++ Opinion +++++++++++++++ **/
 .datos, .opin
-	{	
+	{
 		vertical-align: top;
 		display: inline-block;
 	}
-.opin 
-	{	
+.opin
+	{
 		margin-right: 5%;
 		margin-left: 5%;
 		width: 75%;
@@ -1228,7 +1232,7 @@ form article
 #img-op
 	{
 		border: 7px solid #838493 !important;
-	}			
+	}
 .opin .autor
 	{
 		padding: 6px;
@@ -1237,7 +1241,7 @@ form article
 		font-weight: 800;
 	}
 .autor span
-	{	
+	{
 		margin-right: 1%;
 		color: black;
 	}
@@ -1245,7 +1249,7 @@ form article
 	{
 		margin-right: 1%;
 		color: black;
-	}		
+	}
 .opin .tema
 	{
 		padding: 6px;
@@ -1253,10 +1257,10 @@ form article
 		color: #E74C3C;
 		font-weight: 800;
 	}
-#fecha 
+#fecha
 	{
-		background-image: url(../images/calendar.png);	
-	}	
+		background-image: url(../images/calendar.png);
+	}
 #fecha #anio
 	{
 		padding-left: 22%;
@@ -1266,17 +1270,17 @@ form article
 	{
 		padding-left: 12%;
 		margin-top: -10%;
-	}	
+	}
 #fecha #anio #mes
-	{	
+	{
 		vertical-align: top;
 		display: inline-block;
-	}			
+	}
 #fecha #dia
 	{
 		display: block;
 		font-size: 4em;
-	}	
+	}
 .parrafo{
 	display: none !important;
-}	
+}

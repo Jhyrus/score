@@ -6,11 +6,13 @@ South
 django-pipeline
 django-sekizai
 #django-mptt
-#django_extensions
+django_extensions
+django-debub-toolbar
+
 PIL
 
 #Others
-#django-hstore
+django-hstore
 #python-memcached
 
 #crisppy forms

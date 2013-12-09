@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from django.contrib import admin
-from finish.wall.models import (Autor, Category, Announcement, Caricatura,
+from finish.wall.models import (Autor, Category, Announcement, Banner, Caricatura,
                                 Video, TypePost, Post, Phrase, TypeGalery,
                                 ImageGalery, Sponsor)
 
@@ -16,6 +16,8 @@ class CategoryAdmin(admin.ModelAdmin):
 class AnnouncementAdmin(admin.ModelAdmin):
     pass
 
+class BannerAdmin(admin.ModelAdmin):
+    pass
 
 class CaricaturaAdmin(admin.ModelAdmin):
     pass
@@ -54,6 +56,7 @@ class SponsorAdmin(admin.ModelAdmin):
 admin.site.register(Autor, AutorAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Announcement, AnnouncementAdmin)
+admin.site.register(Banner, BannerAdmin)
 admin.site.register(Caricatura, CaricaturaAdmin)
 admin.site.register(Video, VideoAdmin)
 admin.site.register(TypePost, TypePostAdmin)

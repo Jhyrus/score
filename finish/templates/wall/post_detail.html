@@ -1,0 +1,77 @@
+{% extends 'base_post.html' %}
+{% block title %} Main - Score {% endblock %}
+
+{% block style %}{% endblock %}
+
+	{% block content %}
+			<!-- ********* NOTICIA CENTRAL, CON image Y DESCRICION ********* -->
+			<div id="new">
+				<article class="bd-darken">
+					<span class="category bg-darken">{{ post.category }}</span>
+					<span class="title">{{ post.title }}</span>
+						<figure>
+							<img src="/media/{{ post.image }}" />
+							<figcaption>
+								<span class="desc">{{post.title}}</span>
+								<span class="date">{{post.date}}</span>
+								<span class="autor">{{post.autor}}</span>
+							</figcaption>
+						</figure>
+					<p>{{ post.content|linebreaks }}</p>
+				</article>
+			</div>
+			<div id ="ads">
+				<div id="priority-news">
+					<div id="nav">
+						<a href="#" id="lec" class="current">Lo Más Reciente de {{ post.type }}</a>
+						<!--<a href="#" id="rec">Mas Leido</a>-->
+					</div>
+					{% for p in posts %}
+						{% if p.type == post.type %}
+						<a href="/post/{{ p.id }}/">
+							<article>
+								<span class="title">{{ p.title }}</span>
+								<img src="/media/{{ p.image }}" />
+								<p class="">{{ p.content|safe|truncatechars:240 }}</p>
+							</article>
+						</a>
+						{% else%}
+						{% endif %}
+					{% endfor %}
+				</div>
+				<article id="rect" class="db-darken">
+					{% if banner %}
+						{% for i in banner %}
+							{% ifequal forloop.counter 1 %}
+								<a href="#"><article><img src="/media/{{ i.image }}" /></article></a>
+							{% endifequal %}
+						{% endfor %}
+					{% else %}
+							<a href="#"><article><img src="/ads/{{ i.image }}" /></article></a>
+					{% endif %}
+				</article>
+				<article id="rect" class="db-darken">
+					{% if banner %}
+						{% for i in banner %}
+							{% ifequal forloop.counter 2 %}
+								<a href="#"><article><img src="/media/{{ i.image }}" /></article></a>
+							{% endifequal %}
+						{% endfor %}
+					{% else %}
+							<a href="#"><article><img src="/ads/{{ i.image }}" /></article></a>
+					{% endif %}
+				</article>
+				<article id="rect" class="db-darken">
+					{% if banner %}
+						{% for i in banner %}
+							{% ifequal forloop.counter 3 %}
+								<a href="#"><article><img src="/media/{{ i.image }}" /></article></a>
+							{% endifequal %}
+						{% endfor %}
+					{% else %}
+							<a href="#"><article><img src="/ads/{{ i.image }}" /></article></a>
+					{% endif %}
+				</article>
+			</div>
+	{% endblock %}
+</section>

@@ -5,13 +5,13 @@
 
 	{% block content %}
 		<div id="central">
-			{% if titulares %}
+			{% if posts %}
 			<div id="priority-news">
 				<div id="nav">
 					<a href="#" id="lec" class="current">Lo Más Reciente</a>
 					<!--<a href="#" id="rec">Mas Leido</a>-->
 				</div>
-				{% for p in titulares %}
+				{% for p in posts %}
 					{% ifequal forloop.counter 2 %}
 					<a href="/post/{{ p.id }}/">
 						<article>
@@ -47,7 +47,7 @@
 
 			<!-- ********* NOTICIA CENTRAL, CON image Y DESCRICION ********* -->
 			<div id="main-new">
-				{% for p in titulares %}
+				{% for p in posts %}
 					{% ifequal forloop.counter 1 %}
 					<a href="/post/{{ p.id }}/">
 						<figure>
@@ -101,8 +101,8 @@
 			{% if post %}
 				{% for p in post.object_list %}
 					<a href="/post/{{ p.id }}/">
-							<article class="post bd-purple">
-								<span class="category bg-purple">{{ p.category }}</span>
+							<article class="post bd-red">
+								<span class="category bg-red">{{ p.category }}</span>
 								<figure>
 									<img src="/media/{{ p.image }}" />
 									<figcaption> {{ p.title }} </figcaption>
@@ -170,8 +170,8 @@
 				</article>
 				<article class="small">
 					{% if announcements %}
-							{% for c in announcements %}
-								{% if c.position == "Derecha"%}
+							{% for c in announcements|slice:":5" %}
+								{% if c.position == "Arriba" %}
 									<div class="ad-small"><img src="/media/{{ c.image }}" class="img-ad" /></div>
 								{% else %}
 								{% endif %}

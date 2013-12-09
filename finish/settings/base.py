@@ -269,4 +269,3 @@ LOGIN_REDIRECT_URL = '/accounts/'
 LOGIN_ERROR_URL = '/accounts/login-error/'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
-

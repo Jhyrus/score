@@ -5,62 +5,21 @@
 
 	{% block content %}
 		<div id="central">
-			{% if titulares %}
+			{% if posts %}
 			<div id="priority-news">
-				<div id="nav">
-					<a href="#" id="lec" class="current">Lo Más Reciente</a>
-					<!--<a href="#" id="rec">Mas Leido</a>-->
-				</div>
-				{% for p in titulares %}
-					{% ifequal forloop.counter 2 %}
-					<a href="/post/{{ p.id }}/">
-						<article>
-							<span class="category">{{ p.category }}</span>
-							<span class="title">{{ p.title }}</span>
-							<img src="/media/{{ p.image }}" />
-							<p class="">{{ p.content|safe|truncatechars:130 }}</p>
-						</article>
-					</a>
-					{% endifequal %}
-					{% ifequal forloop.counter 3 %}
-					<a href="/post/{{ p.id }}/">
-						<article>
-							<span class="category">{{ p.category }}</span>
-							<span class="title">{{ p.title }}</span>
-							<img src="/media/{{ p.image }}" />
-							<p class="">{{ p.content|safe|truncatechars:130 }}</p>
-						</article>
-					</a>
-					{% endifequal %}
-					{% ifequal forloop.counter 4 %}
-					<a href="/post/{{ p.id }}/">
-						<article>
-							<span class="category">{{ p.category }}</span>
-							<span class="title">{{ p.title }}</span>
-							<img src="/media/{{ p.image }}" />
-							<p class="">{{ p.content|safe|truncatechars:130 }}</p>
-						</article>
-					</a>
-					{% endifequal %}
-				{% endfor %}
+
 			</div>
 
 			<!-- ********* NOTICIA CENTRAL, CON image Y DESCRICION ********* -->
 			<div id="main-new">
-				{% for p in titulares %}
-					{% ifequal forloop.counter 1 %}
-					<a href="/post/{{ p.id }}/">
 						<figure>
-							<img src="/media/{{ p.image }}" />
+							<img src="/media/{{ object.image }}" />
 							<figcaption>
-								<span class="category">{{ p.category }}</span>
-								<span class="title">{{ p.title }}</span>
-								<p class="">{{ p.content|safe|truncatechars:450 }}</p>
+								<span class="category">{{ object.category }}</span>
+								<span class="title">{{ object.title }}</span>
+								<p class="">{{ object.content|safe|truncatechars:350 }}</p>
 							</figcaption>
 						</figure>
-					</a>
-					{% endifequal %}
-				{% endfor %}
 			</div>
 			{% else %}
 				<h4>No existen publicaciones</h4>
@@ -95,43 +54,9 @@
 		<!-- ********* content|safe|truncatechars PRINCIPAL DE LAS NOTICIAS ********* -->
 		<div id="news">
 			<!-- ++++++ POSTS Y ARTICULOS ++++++ -->
-
 			<div id="posts">
-			{% block contenta %}
-			{% if post %}
-				{% for p in post.object_list %}
-					<a href="/post/{{ p.id }}/">
-							<article class="post bd-purple">
-								<span class="category bg-purple">{{ p.category }}</span>
-								<figure>
-									<img src="/media/{{ p.image }}" />
-									<figcaption> {{ p.title }} </figcaption>
-								</figure>
-								<p class="">{{ p.content|safe|truncatechars:150 }}</p>
-							</article>
-						</a>
-				{% endfor %}
-			{% else %}
-				<h3>NO hay POSTS publicados</h3>
-			{% endif %}
-			<div class="pagination">
-			    <span class="step-links">
-			        {% if post.has_previous %}
-			            <a href="?page2={{ post.previous_page_number }}">Anterior</a>
-			        {% endif %}
 
-			        <span class="current">
-			            Pagina {{ post.number }} de {{ post.paginator.num_pages }}.
-			        </span>
-
-			        {% if post.has_next %}
-			            <a href="?page2={{ post.next_page_number }}">Siguiente</a>
-			        {% endif %}
-			    </span>
 			</div>
-			{% endblock %}
-			</div>
-
 
 			<!-- ++++++ ANUNCIOS, VIDEOS, CUIOSIDADES ++++++ -->
 
@@ -170,8 +95,8 @@
 				</article>
 				<article class="small">
 					{% if announcements %}
-							{% for c in announcements %}
-								{% if c.position == "Derecha"%}
+							{% for c in announcements|slice:":5" %}
+								{% if c.position == "Arriba" %}
 									<div class="ad-small"><img src="/media/{{ c.image }}" class="img-ad" /></div>
 								{% else %}
 								{% endif %}

@@ -1,9 +1,9 @@
-/*-------------------------------------------------------------------- 
+/*--------------------------------------------------------------------
 							CONFIGURATION
 ----------------------------------------------------------------------*/
 *{
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 a{
@@ -18,7 +18,7 @@ html, body{
 	height: auto;padding: 0;
 	width: 100%;
 	font-family: 'Open Sans';
-	
+
 }
 h1{
 	font-style: 'OSWALD';
@@ -79,7 +79,7 @@ nav ul li{
 	font-family: 'Oswald';
 	font-size: 1em;
 	float: left;
-	padding: 7px 11px;
+	padding: 7px 10.3px;
 	margin-left: 3px;
 }
 
@@ -139,7 +139,7 @@ nav img:hover{
 #radio{
 	margin-right: 10%;
 	height: 78px;
-	top: 20px;	
+	top: 20px;
 	-webkit-transition: all 200ms linear;
 	-moz-transition: all 200ms linear;
 	-o-transition: all 200ms linear;
@@ -166,17 +166,17 @@ body #content{
 	margin-top: 10px;
 	height: 2315px; /* Alto del contenido */
 	margin-bottom: 20px;
-	width: 100%;	
+	width: 100%;
 }
 	/* ++++++++ ADS IZQ Y DER ++++++++ */
 	#content .ads{
 		float: left;
 		height: 100%;
-		width: 10%;
+		width: 9%;
 	}
 	#content #main{
 		height: 100%;
-		width: 80%;
+		width: 82%;
 		float: left;
 	}
 	/* ========= NOTICIA CENTRAL =========*/
